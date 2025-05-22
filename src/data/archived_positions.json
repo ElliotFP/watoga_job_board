@@ -1,0 +1,181 @@
+[
+    {
+        "applicationId": "legal-counsel",
+        "title": "Legal Counsel",
+        "location": "El Segundo, CA",
+        "jobType": "Full-Time",
+        "descriptionHeader": "Clearing the Path",
+        "description": "We are hiring a legal counsel to safeguard compliance, navigate permitting, and shape regulatory policy. You will advise internal teams, coordinate with external counsel, and engage with regulatory authorities to aggressively accelerate programs and ensure long-term success.",
+        "isMiningExperienceRequired": false,
+        "responsibilities": [
+            "Ensure full compliance with relevant environmental, safety, and industry regulations for autonomous mining operations",
+            "Lead and streamline permitting processes across multiple jurisdictions (e.g., environmental, zoning, operational)",
+            "Engage with policymakers, lobbyists, and industry groups to influence regulatory frameworks and further the company's strategic interests",
+            "Draft, review, and negotiate contracts, ensuring they meet legal standards and protect the company's interests",
+            "Advise on risk mitigation strategies related to intellectual property, partnerships, and ongoing operations",
+            "Monitor and interpret legislative developments, updating everyone on regulatory changes and recommending proactive measures"
+        ],
+        "competencies": [
+            "Active license to practice law in at least one U.S. jurisdiction (preferably one with relevant mining operations or federal regulations exposure)",
+            "Broad legal knowledge spanning regulatory compliance, environmental law, corporate law, and governmental affairs",
+            "Familiarity with lobbying practices, policy advocacy, and stakeholder engagement",
+            "Excellent communication skills, capable of translating legal language into actionable steps for internal teams (engineering, operations, executive leadership)",
+            "High attention to detail, strong organizational skills, and the foresight to anticipate and mitigate long-term legal and regulatory risks"
+        ],
+        "inThisRoleYouWill": [
+            "Own and shape critical regulatory and compliance, with the opportunity to build a team around yourself over time",
+            "Collaborate directly with internal teams, external counsel, government agencies, and industry groups to drive our roadmap",
+            "Get to work alongside the best engineers and mining operators in the world",
+            "Be given autonomy and virtually unlimited room to grow",
+            "Travel all over the world"
+        ],
+        "thisMightBeAGoodFitIfYou": [
+            "Bias to action, take pride in your work, and care more about getting to the right solution than being right",
+            "Have extensive experience navigating legal landscapes, whether through in-house or firm-based roles",
+            "Are disruption-minded and legally rigorous, balancing strategic objectives with strict compliance",
+            "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles",
+            "Are a previous or future founder — if you leave Durin to start a company, we'll do everything to support you, including investing in you and introducing you to Durin's investors",
+            "Can work from our Los Angeles headquarters (El Segundo)"
+        ],
+        "additionalRequirements": [
+            "Must be willing to work from our headquarters in El Segundo",
+            "Must be willing to work extended hours and weekends as needed"
+        ]
+    },
+    {
+        "applicationId": "head-of-finance",
+        "title": "Head of Finance",
+        "location": "El Segundo, CA",
+        "jobType": "Full-Time",
+        "descriptionHeader": "Accelerate Momentum",
+        "description": "We are hiring a head of finance to oversee financial strategy, ensure sensible and rapid capital exercise, and drive profitability. You'll set the foundation for long-term success, working closely with leadership, investors, and regulators to keep us fiscally sound and winning every opportunity.",
+        "isMiningExperienceRequired": false,
+        "responsibilities": [
+            "Lead negotiations on deals, equity allocations, and M&A opportunities that position us for long-term growth",
+            "Implement budgeting, forecasting, and cost controls to ensure every dollar is tracked so we don't bleed to death",
+            "Implement scalable financial reporting frameworks that support rapid growth and evolving needs",
+            "Identify and utilize tax credits, deductions, and incentives to significantly reduce costs",
+            "Secure grants, accelerators, research funding, and strategic investments to broaden our financial runway",
+            "Continuously assess market conditions and internal metrics to guide future decisions"
+        ],
+        "competencies": [
+            "Deep understanding of financial modeling, tax law, and capital markets (preferably related to mining or commodities)",
+            "Proficiency in negotiating complex equity, M&A, and joint venture agreements",
+            "Track record in negotiating deals that maximize value, minimize cost, and sustain growth",
+            "Exceptional communication skills to explain financial strategies and outcomes to non-financial stakeholders",
+            "Experience leveraging government incentive programs, R&D credits, and public funding initiatives",
+            "Strong financial modeling skills to forecast cash flow, ROI, and profitability scenarios"
+        ],
+        "inThisRoleYouWill": [
+            "Own and shape financial decisions, with the opportunity to build a team around yourself over time",
+            "Work directly with our internal and external customers to drive our roadmap",
+            "Get to work alongside the best engineers and mining operators in the world",
+            "Be given autonomy and virtually unlimited room to grow",
+            "Travel all over the world"
+        ],
+        "thisMightBeAGoodFitIfYou": [
+            "Bias to action, take pride in your work, and care more about getting to the right solution than being right",
+            "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles",
+            "Are a previous or future founder — if you leave Durin to start a company, we'll do everything to support you, including investing in you and introducing you to Durin's investors",
+            "Can work from our Los Angeles headquarters (El Segundo)"
+        ],
+        "additionalRequirements": [
+            "Must be willing to work from our headquarters in El Segundo",
+            "Must be willing to work extended hours and weekends as needed"
+        ]
+    },
+    {
+        "applicationId": "electrical-controls-engineer",
+        "title": "Electrical Controls Engineer",
+        "location": "El Segundo, CA",
+        "jobType": "Full-Time",
+        "descriptionHeader": "Building the Rig",
+        "description": "We are hiring an electrical controls engineer to design and implement the electrical systems that drive our autonomous drilling rigs. You will rapidly prototype, iterate, and collaborate closely with mechanical and software teams, testing systems in the field daily or weekly.",
+        "isMiningExperienceRequired": false,
+        "responsibilities": [
+            "Design and implement electrical systems—sensors, power distribution, controls—for autonomous drilling rigs",
+            "Collaborate closely with mechanical engineers to ensure seamless subsystem integration",
+            "Optimize sensors, wiring, and power components for durability and reliability in rugged conditions",
+            "Create and maintain electrical schematics, wiring diagrams, and system specifications",
+            "Test, troubleshoot, and validate electrical assemblies in both lab and field environments",
+            "Specify and source components (sensors, actuators, cables, connectors) fit for harsh operational settings",
+            "Support field diagnostics and performance analyses to drive continuous improvements"
+        ],
+        "competencies": [
+            "Experience in electrical design for heavy machinery, robotics, or autonomous systems",
+            "Proficiency with electrical CAD tools (e.g., KiCAD, EPLAN)",
+            "Strong knowledge of power distribution, sensor technologies, motor control, and automation fundamentals",
+            "Familiarity with industrial communication protocols (CAN bus, SPI, I2C, Ethernet)",
+            "Experience with PLCs, HMIs, and embedded systems integration",
+            "Skilled with electrical testing tools (oscilloscopes, network analyzers)",
+            "Knowledge of signal processing techniques (filtering, noise reduction) for robust data quality",
+            "Ability to work in a fast-paced and collaborative environment to rapidly prototype and manufacture new products",
+            "Experience with field testing and working in rugged environments"
+        ],
+        "inThisRoleYouWill": [
+            "Own a product vertical with the opportunity to build a team around yourself over time",
+            "Work directly with our internal and external customers to drive our roadmap",
+            "Get to build alongside the best engineers and mining operators in the world",
+            "Be given autonomy and virtually unlimited room to grow",
+            "Travel all over the world"
+        ],
+        "thisMightBeAGoodFitIfYou": [
+            "Bias to action, take pride in your work and care more about getting to the right solution than being right",
+            "Have led critical projects or initiatives",
+            "Have extensive experience shipping modern, full-stack hardware",
+            "Are product-minded and user-driven",
+            "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles",
+            "Are a previous or future founder — if you leave Durin to start a company, we'll do everything to support you, including investing in you and introducing you to Durin's investors",
+            "Can work from our Los Angeles headquarters (El Segundo)"
+        ],
+        "additionalRequirements": [
+            "Must be willing to work from our headquarters in El Segundo",
+            "Must be willing to work extended hours and weekends as needed"
+        ]
+    },
+    {
+        "applicationId": "embedded-systems-engineer",
+        "title": "Embedded Systems Engineer",
+        "location": "El Segundo, CA",
+        "jobType": "Full-Time",
+        "descriptionHeader": "Building the Rig",
+        "description": "We are hiring an embedded systems engineer to develop low-level firmware for sensors, microcontrollers, and communication systems on our autonomous drilling rigs. You’ll rapidly prototype, iterate, and collaborate with the rest of our team, testing in the field daily or weekly.",
+        "isMiningExperienceRequired": false,
+        "responsibilities": [
+            "Develop and optimize firmware for embedded microcontrollers and industrial-grade equipment",
+            "Integrate and calibrate diverse sensors (pressure, vibration, temperature) for real-time data acquisition and control loops",
+            "Ensure reliable, timing-critical firmware operation in rugged environments, supporting closed-loop automation",
+            "Connect embedded devices to networks (e.g., Starlink) for remote data capture",
+            "Collaborate with mechanical and electrical engineers to align hardware and software integrations from PCB to actuator",
+            "Iterate quickly on firmware and sensor configurations in both lab and field environments"
+        ],
+        "competencies": [
+            "Experience in embedded firmware development, ideally in industrial or heavy machinery contexts",
+            "Strong understanding of real-time operating systems, control algorithms (e.g., PID), and sensor fusion",
+            "Skilled at sensor integration, signal conditioning, and data processing for actionable insights",
+            "Familiarity with industrial communication protocols (CAN bus, Modbus) and wireless solutions",
+            "Proven ability to maintain robustness in challenging conditions (dust, vibration, extreme temperatures)",
+            "Comfortable in a fast-paced, interdisciplinary team environment, rapidly prototyping, testing, and refining code for field-ready performance"
+        ],
+        "inThisRoleYouWill": [
+            "Own a product vertical with the opportunity to build a team around yourself over time",
+            "Work directly with our internal and external customers to drive our roadmap",
+            "Get to build alongside the best engineers and mining operators in the world",
+            "Be given autonomy and virtually unlimited room to grow",
+            "Travel all over the world"
+        ],
+        "thisMightBeAGoodFitIfYou": [
+            "Have a bias to action, take pride in your work, and care more about getting to the right solution than being right",
+            "Have led critical projects or initiatives",
+            "Have extensive experience shipping modern, full-stack firmware",
+            "Are product-minded and user-driven",
+            "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles",
+            "Are a previous or future founder — if you leave Durin to start a company, we'll do everything to support you, including investing in you and introducing you to Durin's investors",
+            "Can work from our Los Angeles headquarters (El Segundo)"
+        ],
+        "additionalRequirements": [
+            "Must be willing to work from our headquarters in El Segundo",
+            "Must be willing to work extended hours and weekends as needed"
+        ]
+    }
+]
