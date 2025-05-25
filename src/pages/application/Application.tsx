@@ -1,7 +1,9 @@
+'use client';
+
 import OPEN_POSITIONS from '../../data/open_positions.json';
 import Navbar from '../../navbar/Navbar';
-import { useRouter } from 'next/router';
-import { Box, Button, Text, Heading, Center, Separator, VStack, useBreakpointValue } from '@chakra-ui/react';
+import { useRouter, useParams } from 'next/navigation';
+import { Box, Button, Text, Heading, Center, Divider, VStack, useBreakpointValue } from '@chakra-ui/react';
 import { BulletList } from '../../components/BulletList';
 import { SectionHeader } from '../../components/SectionHeader';
 import ApplyForm from './apply-form/ApplyForm';
@@ -12,7 +14,8 @@ import { ApplicationDetails } from '../../types/application';
 
 const Application = () => {
     const router = useRouter();
-    const { applicationId } = router.query;
+    const params = useParams();
+    const applicationId = params?.applicationId as string;
 
     const topPadding = useBreakpointValue({ base: 52, md: 72 });
     const curApp = OPEN_POSITIONS.find((job) => job.applicationId === applicationId) as ApplicationDetails | undefined;
@@ -60,13 +63,14 @@ const Application = () => {
     }
 
     return (
-        <div>
+        <div className="bg-black">
             <Navbar jsxToRight={
                 <Button
-                    colorScheme="black"
+                    colorScheme="white"
                     px={[4, 8]}
+                    fontFamily="Lekton"
                     size={["2xs", "xs"]}
-                    fontSize={["11px", "13px"]}
+                    fontSize={["16px", "24px"]}
                     borderRadius={["3px", "4px"]}
                     onClick={scrollToApplicationForm}
                 >
@@ -81,20 +85,21 @@ const Application = () => {
                     textTransform="uppercase"
                     fontWeight={700}
                     lineHeight={["1.2", "1.33"]}
+                    color="whiteAlpha.900"
                 >
                     {curApp.title}
                 </Heading>
-                <Text mb={[3, 5]} opacity={0.65} fontSize="14px">{curApp.location}</Text>
+                <Text mb={[3, 5]} opacity={0.65} fontSize="14px" color="whiteAlpha.900">{curApp.location}</Text>
 
-                <Text mb={[3, 4]} fontSize={["sm", "sm"]}>
+                <Text mb={[3, 4]} fontSize={["sm", "sm"]} color="whiteAlpha.900">
                     Durin was founded under the belief that raw materials should not be a constraint on human progress. We are actively developing the technologies to make this possible, with the ultimate goal of becoming the bedrock of the global supply chain.
                 </Text>
 
-                <Separator my={[4, 6]} />
+                <Divider my={[4, 6]} />
 
                 <Box className="pl-4 md:pl-8 [&>ul]:mb-4 [&>ul>li]:mb-1.5 md:[&>ul>li]:mb-1 [&>ul>li]:leading-[1.5] md:[&>ul>li]:leading-[1.6]">
                     <SectionHeader>Who We Are</SectionHeader>
-                    <Text mb={4} fontSize="sm">
+                    <Text mb={4} fontSize="sm" color="whiteAlpha.900">
                         Durin builds and operates automated drill rigs to accelerate mineral discovery.
                         <br />
                         <br />
@@ -104,13 +109,13 @@ const Application = () => {
                         Although the mining industry is worth $2.4 trillion, mineral exploration has hardly changed in over 70 years. Our mission is to change that. The first step is the development and mass-production of drilling rigs with automated controls and real-time data streams to increase safety, accuracy, and efficiency. That is just the beginning. <a href="https://learn.durin.com" target="_blank" rel="noopener noreferrer" className="underline text-[#0070f3] ml-0.5">Learn more</a>
                     </Text>
 
-                    <Separator my={6} />
+                    <Divider my={6} />
 
                     <SectionHeader>{curApp.descriptionHeader}</SectionHeader>
-                    <Text mb={4} fontSize="sm">{curApp.description}</Text>
-                    {!!curApp.note && <Text mb={5} fontSize="sm" fontStyle="italic" opacity={0.8}>Note: {curApp.note}</Text>}
+                    <Text mb={4} fontSize="sm" color="whiteAlpha.900">{curApp.description}</Text>
+                    {!!curApp.note && <Text mb={5} fontSize="sm" fontStyle="italic" opacity={0.8} color="whiteAlpha.900">Note: {curApp.note}</Text>}
 
-                    <Separator my={6} />
+                    <Divider my={6} />
 
                     {!isGeneralApplication ? (
                         <>
@@ -126,27 +131,27 @@ const Application = () => {
                             <SectionHeader>This might be a good fit if you</SectionHeader>
                             <BulletList items={curApp.thisMightBeAGoodFitIfYou} />
 
-                            <Separator my={6} />
+                            <Divider my={6} />
 
                             <SectionHeader>Compensation</SectionHeader>
                             {!isContractPosition ? (
                                 <>
-                                    <Text mb={4} fontSize="sm">
+                                    <Text mb={4} fontSize="sm" color="whiteAlpha.900">
                                         This role will pay <b>{curApp.salary}</b>, plus <b>significant equity</b>, so you have a real stake in Durin&apos;s success. Everyone is an owner, so as the company grows, your equity grows too.
                                     </Text>
-                                    <Text mb={4} fontSize="sm">Aside from base compensation, we invest heavily in our team. You&apos;ll have the freedom and resources to experiment and iterate quickly. We&apos;re a high-growth company with no middle management, which translates to fast decision making and the ability for you to own major initiatives from day one.</Text>
-                                    <Text mb={6} fontSize="sm">We also offer 100% healthcare coverage (medical, dental, vision), all meals (breakfast, lunch, dinner) are paid for when you&apos;re at headquarters, and we can help you find housing nearby.</Text>
+                                    <Text mb={4} fontSize="sm" color="whiteAlpha.900">Aside from base compensation, we invest heavily in our team. You&apos;ll have the freedom and resources to experiment and iterate quickly. We&apos;re a high-growth company with no middle management, which translates to fast decision making and the ability for you to own major initiatives from day one.</Text>
+                                    <Text mb={6} fontSize="sm" color="whiteAlpha.900">We also offer 100% healthcare coverage (medical, dental, vision), all meals (breakfast, lunch, dinner) are paid for when you&apos;re at headquarters, and we can help you find housing nearby.</Text>
                                 </>
                             ) : (
-                                <Text mb={4} fontSize="sm">This role pays <b>{curApp.salary}</b> as a contractor. We value expertise and will ensure everyone on our team is compensated fairly for their critical contributions to our ambitious goals.</Text>
+                                <Text mb={4} fontSize="sm" color="whiteAlpha.900">This role pays <b>{curApp.salary}</b> as a contractor. We value expertise and will ensure everyone on our team is compensated fairly for their critical contributions to our ambitious goals.</Text>
                             )}
 
-                            <Separator my={6} />
+                            <Divider my={6} />
 
                             <SectionHeader>Additional Requirements</SectionHeader>
                             <BulletList items={curApp.additionalRequirements} />
 
-                            <Separator my={6} />
+                            <Divider my={6} />
                         </>
                     ) : (
                         <>
@@ -183,21 +188,21 @@ const Application = () => {
                                 "Support for future entrepreneurial endeavors",
                             ]} />
 
-                            <Separator my={6} />
+                            <Divider my={6} />
                         </>
                     )}
 
-                    <Text fontSize="md" mt={8}>Join Durin to build the future of mining. If you&apos;re passionate about making a real-world impact and solving complex challenges, we&apos;d love to hear from you.</Text>
+                    <Text fontSize="md" mt={8} color="whiteAlpha.900" fontFamily="Lekton">Join Durin to build the future of mining. If you&apos;re passionate about making a real-world impact and solving complex challenges, we&apos;d love to hear from you.</Text>
                 </Box>
             </Box>
 
             <Box
                 ref={applicationFormRef}
-                bg="#f5f5f5"
+                bg="#141414"
                 px={[4, 8]}
                 py={[6, 8]}
             >
-                <ApplyForm applicationId={applicationId as string} isContract={isContractPosition} />
+                <ApplyForm applicationId={applicationId} isContract={isContractPosition} />
             </Box>
 
             <Footer />

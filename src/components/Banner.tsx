@@ -1,3 +1,5 @@
+'use client';
+
 import { Box, Text, Button, Flex, Image } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 import { IoMdClose } from 'react-icons/io';

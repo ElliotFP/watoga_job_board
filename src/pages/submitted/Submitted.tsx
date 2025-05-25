@@ -1,11 +1,14 @@
+'use client';
+
 import { Box, Text, Heading, Button, Center, VStack } from '@chakra-ui/react';
-import { useRouter } from 'next/router';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Navbar from '../../navbar/Navbar';
 import Footer from '../../footer/Footer';
 
 const Submitted = () => {
     const router = useRouter();
-    const { name } = router.query;
+    const searchParams = useSearchParams();
+    const name = searchParams?.get('name');
 
     return (
         <Box minH="100vh" display="flex" flexDirection="column">

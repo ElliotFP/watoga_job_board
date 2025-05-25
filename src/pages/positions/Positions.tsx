@@ -1,16 +1,18 @@
+'use client';
+
 import OPEN_POSITIONS from '../../data/open_positions.json';
-import { Box, Text, Heading, useBreakpointValue, Badge, Separator } from '@chakra-ui/react';
+import { Box, Text, Heading,Badge, Divider } from '@chakra-ui/react';
 import { RxExternalLink } from "react-icons/rx";
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import Navbar from '../../navbar/Navbar';
 import Footer from '../../footer/Footer';
 
 const Positions = () => {
     const router = useRouter();
-    const iconSize = useBreakpointValue({ base: 18, md: 24, lg: 26 });
+    // const iconSize = useBreakpointValue({ base: 18, md: 24, lg: 26 });
 
     return (
-        <Box minH="100vh" display="flex" flexDirection="column">
+        <Box minH="100vh" display="flex" bg="black" flexDirection="column">
             <Navbar />
 
             <Box
@@ -20,6 +22,7 @@ const Positions = () => {
                 mx="auto"
                 w="full"
                 mb={[8, 10]}
+                
             >
                 <Heading
                     as="h1"
@@ -27,7 +30,8 @@ const Positions = () => {
                     fontWeight="bold"
                     mt={[8, 10]}
                     mb={[1, 2]}
-                    color="blackAlpha.900"
+                    fontFamily="Lekton"
+                    color="whiteAlpha.900"
                     lineHeight={["1.2", "1.1"]}
                     textTransform="uppercase"
                 >
@@ -35,7 +39,8 @@ const Positions = () => {
                 </Heading>
                 <Text
                     ml='2px'
-                    color="gray.600"
+                    color="gray.400"
+                    fontFamily="Lekton"
                     fontSize={["md", "lg", "xl"]}
                     mb={[8, 10]}
                     fontWeight="500"
@@ -50,6 +55,14 @@ const Positions = () => {
                             mb={[4, 6]}
                             fontSize={["18px", "24px", "28px"]}
                             fontWeight="medium"
+                            color="whiteAlpha.900"   
+                            borderBottom="1px solid"
+
+                            _hover={{
+                                borderColor: "whiteAlpha.500",
+                                border: "1px solid",
+                                bg: "whiteAlpha.100"
+                            }}
                         >
                             <Box
                                 className="flex justify-between items-center rounded-[2px] p-[10px] md:p-[16px] hover:bg-black/[0.02] active:bg-black/[0.05] cursor-pointer"
@@ -58,7 +71,7 @@ const Positions = () => {
                                 <Box>
                                     <Text
                                         mb={[0.5, 1]}
-                                        color="blackAlpha.900"
+                                        color="whiteAlpha.900"
                                         fontWeight="500"
                                         fontSize={["18px", "24px"]}
                                         lineHeight={["1.3", "1.4"]}
@@ -69,7 +82,7 @@ const Positions = () => {
                                     <Box display="flex" alignItems="center" gap={["6px", "8px"]}>
                                         <Text
                                             fontSize={["13px", "16px"]}
-                                            color="gray.600"
+                                            color="gray.400"
                                             lineHeight={["1.6", "1.8"]}
                                         >
                                             {position.location}
@@ -95,7 +108,9 @@ const Positions = () => {
                                     display="flex"
                                     alignItems="center"
                                     gap={2.5}
-                                    className="text-[#141412]"
+                                    _hover={{
+                                        color: "whiteAlpha.500"
+                                    }}
                                 >
                                     <Text
                                         fontSize={["14px", "16px", "18px"]}
@@ -104,14 +119,14 @@ const Positions = () => {
                                     >
                                         Apply
                                     </Text>
-                                    <RxExternalLink size={iconSize} color="#141412" />
+                                    {/* <RxExternalLink size={iconSize} color="#141412" /> */}
                                 </Box>
                             </Box>
                         </Box>
                     ))}
                 </Box>
 
-                <Separator my={[8, 10]} />
+                <Divider my={[8, 10]} />
 
                 <Box
                     display="flex"
@@ -146,6 +161,7 @@ const Positions = () => {
                             fontWeight="600"
                             color="gray.800"
                             display="flex"
+                            fontFamily="Lekton"
                             alignItems="center"
                             justifyContent="center"
                             gap={2}
@@ -161,6 +177,7 @@ const Positions = () => {
                         bg="white"
                         border="2px solid"
                         borderColor="gray.200"
+
                         borderRadius="2px"
                         transition="all 0.2s ease-in-out"
                         _hover={{
@@ -181,6 +198,7 @@ const Positions = () => {
                             fontWeight="600"
                             color="gray.800"
                             display="flex"
+                            fontFamily="Lekton"
                             alignItems="center"
                             justifyContent="center"
                             gap={2}

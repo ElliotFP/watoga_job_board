@@ -16,6 +16,7 @@ export const BulletList = ({ items, fontSize = "sm", paddingLeft = 8 }: BulletLi
                 position="relative"
                 pl={1}
                 mb={1}
+                color="whiteAlpha.900"
             >
                 <Box
                     position="absolute"

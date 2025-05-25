@@ -1,5 +1,4 @@
 import { useCallback, useState } from 'react';
-import { Box, VStack, Grid, Button, Input, Text, Textarea, HStack, Spinner } from '@chakra-ui/react';
 import { Formik, Form, Field, FieldProps } from 'formik';
 import { ApplicationFields, SelectBoolean } from '../../../types/application';
 import { useDropzone } from 'react-dropzone';
@@ -8,11 +7,17 @@ import Select from 'react-select';
 import { BsPaperclip } from 'react-icons/bs';
 import { FaCheck } from 'react-icons/fa';
 import toast from 'react-hot-toast';
-import { useNavigate } from 'react-router-dom';
-import { supabase } from '../../../supabaseClient';
+import { useRouter } from 'next/navigation';
+import { createClient } from '@supabase/supabase-js';
+import { Button, Spinner } from '@chakra-ui/react';
+
+const supabase = createClient(
+    'https://yexjyyemagfobogoeuba.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlleGp5eWVtYWdmb2JvZ29ldWJhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc5NjQyMDgsImV4cCI6MjA2MzU0MDIwOH0.FMDDo3Bv8GA3M7q6eHS17r7Idkk1FmEQLvtmU2tBul4'
+);
 
 const RequiredStar = () => (
-    <span style={{ color: 'red', paddingLeft: '2px' }}>*</span>
+    <span className="text-red-500 pl-0.5">*</span>
 );
 
 const validationSchema = (props: { isContract: boolean }) => Yup.object().shape({
@@ -53,61 +58,54 @@ const FileUploadField = ({ field, form }: FieldProps) => {
         onDrop,
         accept: {
             'application/pdf': ['.pdf'],
+            'application/msword': ['.doc'],
+            'application/vnd.openxmlformats-officedocument.wordprocessingml.document': ['.docx']
         },
+        maxSize: 5 * 1024 * 1024, // 5MB
         maxFiles: 1,
-        multiple: false,
+        multiple: false
     });
 
     const file = field.value as File;
 
     return (
-        <Box
+        <div
             {...getRootProps()}
-            p={2}
-            color="#515357BB"
-            border="1px solid #e2e2e2"
-            borderColor={file ? '#008000' : '#e2e2e2'}
-            backgroundColor={file ? "#ffffff" : "#ebecf0"}
-            borderRadius="sm"
-            cursor="pointer"
-            maxW={["100%", "280px"]}
-            fontSize={["16px", "20px"]}
-            _hover={{ borderColor: '#515357aa', borderStyle: 'dashed' }}
+            className={`p-2 text-[#515357BB] border border-[#e2e2e2] rounded-sm cursor-pointer max-w-[280px] text-base md:text-xl hover:border-[#515357aa] hover:border-dashed ${
+                file ? 'bg-white border-green-600' : 'bg-[#ebecf0]'
+            }`}
         >
             <input {...getInputProps()} />
-            <HStack gap={2}>
-                {file ? <FaCheck color='#008000' size={13} style={{ margin: '0 2px' }} /> : <BsPaperclip />}
+            <div className="flex items-center gap-2">
+                {file ? <FaCheck color='#008000' size={13} className="mx-0.5" /> : <BsPaperclip />}
                 {file ? (
-                    <Text color="#008000" fontSize="14px">
+                    <span className="text-green-600 text-sm">
                         {file.name.length > 28 ? `${file.name.slice(0, 28)}...` : file.name}
-                    </Text>
+                    </span>
                 ) : (
-                    <Text fontSize="14px" color="#515357BB">
+                    <span className="text-sm text-[#515357BB]">
                         ATTACH RESUME
-                        <span style={{ padding: '3px' }}>/</span>
+                        <span className="px-0.5">/</span>
                         CV
-                    </Text>
+                    </span>
                 )}
-            </HStack>
-        </Box>
+            </div>
+        </div>
     );
 };
 
 const ErrorMessage = ({ message, isBottom }: { message: string, isBottom?: boolean }) => (
-    <Text
-        position="absolute"
-        top={isBottom ? 'calc(100% - 4px)' : '-16px'}
-        left="2px"
-        color="red.500"
-        fontSize={["9px", "10px"]}
-        fontWeight="medium"
+    <span
+        className={`absolute text-red-500 text-[9px] md:text-[10px] font-medium ${
+            isBottom ? 'top-[calc(100%-4px)]' : '-top-4'
+        } left-0.5`}
     >
         {message}
-    </Text>
+    </span>
 );
 
 const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isContract: boolean }) => {
-    const navigate = useNavigate();
+    const router = useRouter();
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const initialValues: ApplicationFields = {
@@ -128,12 +126,11 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
     };
 
     const handleSubmit = async (values: ApplicationFields) => {
-        const now = new Date();
-        const formattedDate = `${now.getFullYear()}-${(now.getMonth() + 1).toString().padStart(2, '0')}-${now.getDate().toString().padStart(2, '0')}_${now.getHours().toString().padStart(2, '0')}-${now.getMinutes().toString().padStart(2, '0')}`;
-
         setIsSubmitting(true);
-
         try {
+            const now = new Date();
+            const formattedDate = `${now.getFullYear()}-${(now.getMonth() + 1).toString().padStart(2, '0')}-${now.getDate().toString().padStart(2, '0')}_${now.getHours().toString().padStart(2, '0')}-${now.getMinutes().toString().padStart(2, '0')}`;
+
             const { data: uploadData, error: uploadError } = await supabase.storage
                 .from('job_resumes')
                 .upload(`${values.email}/${values.applicationId}/${formattedDate}_${values.resume?.name}`, values.resume as File);
@@ -167,55 +164,44 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
                 throw insertError;
             }
 
-            navigate('/submitted', { replace: true, state: { name: values.firstName } });
+            router.push('/submitted');
             toast.success('Application submitted successfully!');
-        } catch (error: any) {
-            if (error?.message?.includes('resource already exists')) {
+        } catch (error) {
+            if (error instanceof Error && error.message.includes('resource already exists')) {
                 toast.error('You have already submitted an application for this job.');
             } else {
-                toast.error('Something went wrong. ' + error.message);
+                toast.error('Something went wrong. ' + (error instanceof Error ? error.message : 'Unknown error'));
             }
         }
-
         setIsSubmitting(false);
     };
 
     return (
-        <Box px={[4, 8]} py={[3, 6]} mx="auto" maxW="2xl" color="#515357">
+        <div className="px-4 md:px-8 py-3 md:py-6 mx-auto max-w-2xl text-[#515357] ">
             <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema({ isContract })}
                 validateOnChange={false}
                 validateOnBlur={false}
                 onSubmit={handleSubmit}
+                
             >
-                {({ errors, touched, setFieldError, setFieldTouched }) => (
+                {({ errors, touched, setFieldError }) => (
                     <Form autoComplete="on">
-                        <VStack gap={[4, 6]} align="stretch">
+                        <div className="flex flex-col gap-4 md:gap-6">
                             {/* SUBMIT YOUR APPLICATION */}
-                            <Text
-                                fontWeight="bold"
-                                textTransform="uppercase"
-                                fontSize={["15px", "17px"]}
-                                color="#515357"
-                                mb={[3, 4]}
+                            <span
+                                className="font-bold uppercase text-[15px] md:text-[17px] text-[#515357] mb-3 md:mb-4"
                             >
                                 Submit Your Application
-                            </Text>
+                            </span>
 
-                            <Grid
-                                templateColumns={["1fr", "210px 1fr"]}
-                                gap={[3, 6]}
-                            >
+                            <div className="grid grid-cols-1 md:grid-cols-[210px_1fr] gap-3 md:gap-6">
                                 {/* Resume */}
-                                <Box
-                                    display="flex"
-                                    alignItems={["flex-start", "center"]}
-                                    fontSize={["14px", "16px"]}
-                                >
+                                <div className="flex items-start md:items-center text-sm md:text-base">
                                     Resume/CV<RequiredStar />
-                                </Box>
-                                <Box position="relative">
+                                </div>
+                                <div className="relative">
                                     <Field name="resume">
                                         {(props: FieldProps) => (
                                             <FileUploadField {...props} />
@@ -224,269 +210,193 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
                                     {touched.resume && errors.resume && (
                                         <ErrorMessage message={errors.resume as string} />
                                     )}
-                                </Box>
+                                </div>
 
                                 {/* First Name */}
-                                <Box
-                                    display="flex"
-                                    alignItems={["flex-start", "center"]}
-                                    fontSize={["14px", "16px"]}
-                                >
+                                <div className="flex items-start md:items-center text-sm md:text-base">
                                     First Name<RequiredStar />
-                                </Box>
-                                <Box position="relative">
+                                </div>
+                                <div className="relative">
                                     <Field name="firstName">
                                         {({ field }: FieldProps) => (
-                                            <Input
+                                            <input
                                                 {...field}
-                                                padding="8px"
-                                                color="#111"
-                                                fontSize={["14px", "16px"]}
-                                                backgroundColor="white"
+                                                className="w-full p-2 text-[#111] text-sm md:text-base bg-white"
                                                 type="text"
                                                 autoComplete="given-name"
                                                 onChange={(e) => {
                                                     field.onChange(e);
                                                     setFieldError('firstName', '');
-                                                    setFieldTouched('firstName', false);
                                                 }}
                                             />
                                         )}
                                     </Field>
                                     {touched.firstName && errors.firstName && (
-                                        <ErrorMessage message={errors.firstName} />
+                                        <ErrorMessage message={errors.firstName as string} />
                                     )}
-                                </Box>
+                                </div>
 
                                 {/* Last Name */}
-                                <Box
-                                    display="flex"
-                                    alignItems={["flex-start", "center"]}
-                                    fontSize={["14px", "16px"]}
-                                >
+                                <div className="flex items-start md:items-center text-sm md:text-base">
                                     Last Name<RequiredStar />
-                                </Box>
-                                <Box position="relative">
+                                </div>
+                                <div className="relative">
                                     <Field name="lastName">
                                         {({ field }: FieldProps) => (
-                                            <Input
+                                            <input
                                                 {...field}
-                                                padding="8px"
-                                                color="#111"
-                                                fontSize={["14px", "16px"]}
-                                                backgroundColor="white"
+                                                className="w-full p-2 text-[#111] text-sm md:text-base bg-white"
                                                 type="text"
                                                 autoComplete="family-name"
                                                 onChange={(e) => {
                                                     field.onChange(e);
                                                     setFieldError('lastName', '');
-                                                    setFieldTouched('lastName', false);
                                                 }}
                                             />
                                         )}
                                     </Field>
                                     {touched.lastName && errors.lastName && (
-                                        <ErrorMessage message={errors.lastName} />
+                                        <ErrorMessage message={errors.lastName as string} />
                                     )}
-                                </Box>
+                                </div>
 
                                 {/* Email */}
-                                <Box
-                                    display="flex"
-                                    alignItems={["flex-start", "center"]}
-                                    fontSize={["14px", "16px"]}
-                                >
+                                <div className="flex items-start md:items-center text-sm md:text-base">
                                     Email<RequiredStar />
-                                </Box>
-                                <Box position="relative">
+                                </div>
+                                <div className="relative">
                                     <Field name="email">
                                         {({ field }: FieldProps) => (
-                                            <Input
+                                            <input
                                                 {...field}
-                                                padding="8px"
-                                                color="#111"
-                                                fontSize={["14px", "16px"]}
-                                                backgroundColor="white"
+                                                className="w-full p-2 text-[#111] text-sm md:text-base bg-white"
                                                 type="email"
                                                 autoComplete="email"
                                                 onChange={(e) => {
                                                     field.onChange(e);
                                                     setFieldError('email', '');
-                                                    setFieldTouched('email', false);
                                                 }}
                                             />
                                         )}
                                     </Field>
                                     {touched.email && errors.email && (
-                                        <ErrorMessage message={errors.email} />
+                                        <ErrorMessage message={errors.email as string} />
                                     )}
-                                </Box>
+                                </div>
 
                                 {/* Phone */}
-                                <Box
-                                    display="flex"
-                                    alignItems={["flex-start", "center"]}
-                                    fontSize={["14px", "16px"]}
-                                >
+                                <div className="flex items-start md:items-center text-sm md:text-base">
                                     Phone<RequiredStar />
-                                </Box>
-                                <Box position="relative">
+                                </div>
+                                <div className="relative">
                                     <Field name="phone">
                                         {({ field }: FieldProps) => (
-                                            <Input
+                                            <input
                                                 {...field}
-                                                padding="8px"
-                                                color="#111"
-                                                fontSize={["14px", "16px"]}
-                                                backgroundColor="white"
+                                                className="w-full p-2 text-[#111] text-sm md:text-base bg-white"
                                                 type='tel'
                                                 autoComplete='tel'
                                                 onChange={(e) => {
                                                     field.onChange(e);
                                                     setFieldError('phone', '');
-                                                    setFieldTouched('phone', false);
                                                 }}
                                             />
                                         )}
                                     </Field>
                                     {touched.phone && errors.phone && (
-                                        <ErrorMessage message={errors.phone} />
+                                        <ErrorMessage message={errors.phone as string} />
                                     )}
-                                </Box>
-                            </Grid>
+                                </div>
+                            </div>
 
                             {/* Only show these sections if not a contract position */}
                             {!isContract && (
                                 <>
                                     {/* LINKS */}
-                                    <Text
-                                        fontWeight="bold"
-                                        textTransform="uppercase"
-                                        fontSize={["15px", "17px"]}
-                                        color="#515357"
-                                        mb={[2, 2]}
-                                        mt={[6, 8]}
+                                    <span
+                                        className="font-bold uppercase text-[15px] md:text-[17px] text-[#515357] mb-2 md:mb-2 mt-6 md:mt-8"
                                     >
                                         Links
-                                    </Text>
-                                    <Grid
-                                        templateColumns={["1fr", "210px 1fr"]}
-                                        gap={[3, 6]}
-                                    >
-                                        <Box
-                                            display="flex"
-                                            alignItems={["flex-start", "center"]}
-                                            fontSize={["14px", "16px"]}
-                                        >
+                                    </span>
+                                    <div className="grid grid-cols-1 md:grid-cols-[210px_1fr] gap-3 md:gap-6">
+                                        <div className="flex items-start md:items-center text-sm md:text-base">
                                             LinkedIn URL
-                                        </Box>
-                                        <Box position="relative">
+                                        </div>
+                                        <div className="relative">
                                             <Field name="linkedin">
                                                 {({ field }: FieldProps) => (
-                                                    <Input
+                                                    <input
                                                         {...field}
-                                                        padding="8px"
-                                                        color="#111"
-                                                        fontSize={["14px", "16px"]}
-                                                        backgroundColor="white"
+                                                        className="w-full p-2 text-[#111] text-sm md:text-base bg-white"
                                                         autoComplete='web'
                                                         onChange={(e) => {
                                                             field.onChange(e);
                                                             setFieldError('linkedin', '');
-                                                            setFieldTouched('linkedin', false);
                                                         }}
                                                     />
                                                 )}
                                             </Field>
                                             {touched.linkedin && errors.linkedin && (
-                                                <ErrorMessage message={errors.linkedin} />
+                                                <ErrorMessage message={errors.linkedin as string} />
                                             )}
-                                        </Box>
+                                        </div>
 
-                                        <Box
-                                            display="flex"
-                                            alignItems={["flex-start", "center"]}
-                                            fontSize={["14px", "16px"]}
-                                        >
+                                        <div className="flex items-start md:items-center text-sm md:text-base">
                                             Twitter URL
-                                        </Box>
-                                        <Box position="relative">
+                                        </div>
+                                        <div className="relative">
                                             <Field name="twitter">
                                                 {({ field }: FieldProps) => (
-                                                    <Input
+                                                    <input
                                                         {...field}
-                                                        padding="8px"
-                                                        color="#111"
-                                                        fontSize={["14px", "16px"]}
-                                                        backgroundColor="white"
+                                                        className="w-full p-2 text-[#111] text-sm md:text-base bg-white"
                                                         autoComplete="url"
                                                         onChange={(e) => {
                                                             field.onChange(e);
                                                             setFieldError('twitter', '');
-                                                            setFieldTouched('twitter', false);
                                                         }}
                                                     />
                                                 )}
                                             </Field>
                                             {touched.twitter && errors.twitter && (
-                                                <ErrorMessage message={errors.twitter} />
+                                                <ErrorMessage message={errors.twitter as string} />
                                             )}
-                                        </Box>
+                                        </div>
 
-                                        <Box
-                                            display="flex"
-                                            alignItems={["flex-start", "center"]}
-                                            fontSize={["14px", "16px"]}
-                                        >
+                                        <div className="flex items-start md:items-center text-sm md:text-base">
                                             GitHub URL
-                                        </Box>
-                                        <Box position="relative">
+                                        </div>
+                                        <div className="relative">
                                             <Field name="github">
                                                 {({ field }: FieldProps) => (
-                                                    <Input
+                                                    <input
                                                         {...field}
-                                                        padding="8px"
-                                                        color="#111"
-                                                        fontSize={["14px", "16px"]}
-                                                        backgroundColor="white"
+                                                        className="w-full p-2 text-[#111] text-sm md:text-base bg-white"
                                                         autoComplete="url"
                                                         onChange={(e) => {
                                                             field.onChange(e);
                                                             setFieldError('github', '');
-                                                            setFieldTouched('github', false);
                                                         }}
                                                     />
                                                 )}
                                             </Field>
                                             {touched.github && errors.github && (
-                                                <ErrorMessage message={errors.github} />
+                                                <ErrorMessage message={errors.github as string} />
                                             )}
-                                        </Box>
-                                    </Grid>
+                                        </div>
+                                    </div>
 
                                     {/* AVAILABILITY */}
-                                    <Text
-                                        fontWeight="bold"
-                                        textTransform="uppercase"
-                                        fontSize={["15px", "17px"]}
-                                        color="#515357"
-                                        mb={[2, 2]}
-                                        mt={[6, 8]}
+                                    <span
+                                        className="font-bold uppercase text-[15px] md:text-[17px] text-[#515357] mb-2 md:mb-2 mt-6 md:mt-8"
                                     >
                                         Availability
-                                    </Text>
-                                    <Grid
-                                        templateColumns={["1fr", "210px 1fr"]}
-                                        gap={[3, 6]}
-                                    >
-                                        <Box
-                                            display="block"
-                                            fontSize={["14px", "16px"]}
-                                            alignItems={["flex-start", "center"]}
-                                        >
+                                    </span>
+                                    <div className="grid grid-cols-1 md:grid-cols-[210px_1fr] gap-3 md:gap-6">
+                                        <div className="flex items-start md:items-center text-sm md:text-base">
                                             Currently in LA or willing to relocate immediately?<RequiredStar />
-                                        </Box>
-                                        <Box position="relative">
+                                        </div>
+                                        <div className="relative">
                                             <Field name="willingToRelocate">
                                                 {({ field, form }: FieldProps) => (
                                                     <Select
@@ -495,7 +405,6 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
                                                         onChange={(option) => {
                                                             form.setFieldValue(field.name, option?.value ?? SelectBoolean.Select);
                                                             setFieldError('willingToRelocate', '');
-                                                            setFieldTouched('willingToRelocate', false);
                                                         }}
                                                         placeholder="Select"
                                                         className="basic-select"
@@ -504,18 +413,14 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
                                                 )}
                                             </Field>
                                             {touched.willingToRelocate && errors.willingToRelocate && (
-                                                <ErrorMessage message={errors.willingToRelocate} />
+                                                <ErrorMessage message={errors.willingToRelocate as string} />
                                             )}
-                                        </Box>
+                                        </div>
 
-                                        <Box
-                                            display="block"
-                                            fontSize={["14px", "16px"]}
-                                            alignItems={["flex-start", "center"]}
-                                        >
+                                        <div className="flex items-start md:items-center text-sm md:text-base">
                                             Willing to work intense hours?<RequiredStar />
-                                        </Box>
-                                        <Box position="relative">
+                                        </div>
+                                        <div className="relative">
                                             <Field name="willingToWorkIntense">
                                                 {({ field, form }: FieldProps) => (
                                                     <Select
@@ -524,7 +429,6 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
                                                         onChange={(option) => {
                                                             form.setFieldValue(field.name, option?.value ?? SelectBoolean.Select);
                                                             setFieldError('willingToWorkIntense', '');
-                                                            setFieldTouched('willingToWorkIntense', false);
                                                         }}
                                                         placeholder="Select"
                                                         className="basic-select"
@@ -533,111 +437,86 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
                                                 )}
                                             </Field>
                                             {touched.willingToWorkIntense && errors.willingToWorkIntense && (
-                                                <ErrorMessage message={errors.willingToWorkIntense} />
+                                                <ErrorMessage message={errors.willingToWorkIntense as string} />
                                             )}
-                                        </Box>
-                                    </Grid>
+                                        </div>
+                                    </div>
 
                                     {/* ABOUT YOU */}
-                                    <Text
-                                        fontWeight="bold"
-                                        textTransform="uppercase"
-                                        fontSize={["15px", "17px"]}
-                                        color="#515357"
-                                        mb={[2, 2]}
-                                        mt={[6, 8]}
+                                    <span
+                                        className="font-bold uppercase text-[15px] md:text-[17px] text-[#515357] mb-2 md:mb-2 mt-6 md:mt-8"
                                     >
                                         About You
-                                    </Text>
-                                    <VStack align="stretch" gap={[3, 4]}>
-                                        <Box position="relative">
-                                            <Text mb={2} fontSize={["14px", "16px"]}>What motivates you?<RequiredStar /></Text>
+                                    </span>
+                                    <div className="flex flex-col gap-3 md:gap-4">
+                                        <div className="relative">
+                                            <span className="text-sm md:text-base mb-2">What motivates you?<RequiredStar /></span>
                                             <Field name="motivation">
                                                 {({ field }: FieldProps) => (
-                                                    <Textarea
+                                                    <textarea
                                                         {...field}
-                                                        padding="10px"
-                                                        paddingTop="8px"
-                                                        color="#111"
-                                                        fontSize={["14px", "16px"]}
-                                                        backgroundColor="white"
-                                                        minH="120px"
+                                                        className="w-full p-2 text-[#111] text-sm md:text-base bg-white"
+                                                        style={{ minHeight: '120px' }}
                                                         onChange={(e) => {
                                                             field.onChange(e);
                                                             setFieldError('motivation', '');
-                                                            setFieldTouched('motivation', false);
                                                         }}
                                                     />
                                                 )}
                                             </Field>
                                             {touched.motivation && errors.motivation && (
-                                                <ErrorMessage message={errors.motivation} isBottom={true} />
+                                                <ErrorMessage message={errors.motivation as string} isBottom={true} />
                                             )}
-                                        </Box>
+                                        </div>
 
-                                        <Box position="relative">
-                                            <Text mb={2} fontSize={["14px", "16px"]}>What is the most impressive thing you have ever accomplished?<RequiredStar /></Text>
+                                        <div className="relative">
+                                            <span className="text-sm md:text-base mb-2">What is the most impressive thing you have ever accomplished?<RequiredStar /></span>
                                             <Field name="impressiveThing">
                                                 {({ field }: FieldProps) => (
-                                                    <Textarea
+                                                    <textarea
                                                         {...field}
-                                                        padding="10px"
-                                                        paddingTop="8px"
-                                                        color="#111"
-                                                        fontSize={["14px", "16px"]}
-                                                        backgroundColor="white"
-                                                        minH="120px"
+                                                        className="w-full p-2 text-[#111] text-sm md:text-base bg-white"
+                                                        style={{ minHeight: '120px' }}
                                                         onChange={(e) => {
                                                             field.onChange(e);
                                                             setFieldError('impressiveThing', '');
-                                                            setFieldTouched('impressiveThing', false);
                                                         }}
                                                     />
                                                 )}
                                             </Field>
                                             {touched.impressiveThing && errors.impressiveThing && (
-                                                <ErrorMessage message={errors.impressiveThing} isBottom={true} />
+                                                <ErrorMessage message={errors.impressiveThing as string} isBottom={true} />
                                             )}
-                                        </Box>
-                                    </VStack>
+                                        </div>
+                                    </div>
                                 </>
                             )}
 
                             {/* ADDITIONAL INFORMATION */}
-                            <Text
-                                fontWeight="bold"
-                                textTransform="uppercase"
-                                fontSize={["15px", "17px"]}
-                                color="#515357"
-                                mb={[2, 2]}
-                                mt={[4, 6]}
+                            <span
+                                className="font-bold uppercase text-[15px] md:text-[17px] text-[#515357] mb-2 md:mb-2 mt-4 md:mt-6"
                             >
                                 Additional Information
-                            </Text>
-                            <Box position="relative">
+                            </span>
+                            <div className="relative">
                                 <Field name="additionalInformation">
                                     {({ field }: FieldProps) => (
-                                        <Textarea
+                                        <textarea
                                             {...field}
-                                            padding="10px"
-                                            paddingTop="8px"
-                                            color="#111"
-                                            fontSize={["14px", "16px"]}
-                                            backgroundColor="white"
-                                            minH="120px"
+                                            className="w-full p-2 text-[#111] text-sm md:text-base bg-white"
+                                            style={{ minHeight: '120px' }}
                                             placeholder="Tell us anything else you think we should know. We read every word."
                                             onChange={(e) => {
                                                 field.onChange(e);
                                                 setFieldError('additionalInformation', '');
-                                                setFieldTouched('additionalInformation', false);
                                             }}
                                         />
                                     )}
                                 </Field>
-                            </Box>
+                            </div>
 
                             <Button
-                                mt={[3, 4]}
+                                className="mt-3 md:mt-4"
                                 type="submit"
                                 colorScheme="blue"
                                 size={["md", "lg"]}
@@ -647,11 +526,11 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
                             >
                                 {isSubmitting ? <Spinner size="sm" /> : 'Submit Application'}
                             </Button>
-                        </VStack>
+                        </div>
                     </Form>
                 )}
             </Formik>
-        </Box>
+        </div>
     );
 };
 

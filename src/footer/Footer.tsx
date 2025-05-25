@@ -1,5 +1,5 @@
 import { Flex, Image, Text } from '@chakra-ui/react';
-import DurinLogo from '../assets/logo.png';
+import watogaLogo from '../assets/watoga_logo.svg';
 
 const Footer = () => {
     return (
@@ -8,28 +8,29 @@ const Footer = () => {
             className="w-full"
             align="center"
             justify="center"
+            bg="black"
             px={[4, 8, 12]}
             py={[6, 8]}
-            bg="gray.50"
-            borderTop="1px solid"
-            borderColor="#e9e9e9"
+            borderTop="0.5px solid"
+            borderColor="whiteAlpha.500"
             direction="column"
             gap={[3, 4]}
         >
             <Image
-                src={DurinLogo.src}
+                src={watogaLogo.src}
                 alt="Logo"
-                className="h-[28px] md:h-[32px] transition-opacity duration-200 ease-in-out hover:opacity-80 active:opacity-70"
-                onClick={() => window.open('https://www.durin.com', '_blank', 'noopener,noreferrer')}
+                height={12}
+                width={32}
+                onClick={() => window.open('https://www.watoga.com', '_blank', 'noopener,noreferrer')}
                 cursor="pointer"
             />
             <Text
                 fontSize={["xs", "sm"]}
-                color="gray.600"
+                color="whiteAlpha.700"
                 textAlign="center"
                 px={[2, 0]}
             >
-                © {new Date().getFullYear()} Durin. All rights reserved.
+                © {new Date().getFullYear()} Watoga Technologies Inc.. All rights reserved.
             </Text>
         </Flex>
     );
