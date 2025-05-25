@@ -90,52 +90,6 @@
         "salary": "$150,000–$180,000"
     },
     {
-        "applicationId": "senior-mechanical-engineer",
-        "title": "Senior Mechanical Engineer",
-        "location": "El Segundo, CA",
-        "jobType": "Full-Time",
-        "descriptionHeader": "Building the Rig",
-        "description": "As a Senior Mechanical Engineer at Durin you will be directly responsible for designing the structural, hydraulic, and actuation systems at the core of our next-generation drilling rigs. From concept to field deployment, you’ll collaborate across teams to deliver robust, safe, and efficient systems that withstand the toughest conditions.",
-        "note": "You don't need mining or drilling experience to excel in this role.",
-        "responsibilities": [
-            "Design and prototype mechanical systems and components for autonomous drilling rigs, including hydraulic systems, drive systems, and structural elements",
-            "Integrate mechanical designs with electrical, control, and software systems",
-            "Perform simulations, stress analysis, and finite element analysis to ensure the durability and performance of components in harsh operational conditions",
-            "Outline and perform testing and validation of new designs at a subsystem and integration level, iteratively making necessary modifications to achieve the desired objective",
-            "Optimize mechanical systems for performance, weight, cost, and manufacturability",
-            "Conduct field visits to understand operational challenges and implement improvements to enhance performance and reliability in real-world conditions",
-            "Produce documentation outlining design choices, test results, and future improvements"
-        ],
-        "competencies": [
-            "Experience in mechanical design, preferably in heavy machinery, drilling equipment, or autonomous systems",
-            "Proficiency in CAD software (NX, SolidWorks, or similar)",
-            "Experience with FEA tools for stress analysis and simulation (e.g., ANSYS, Abaqus)",
-            "Strong understanding of hydraulic systems, drive mechanisms, and structural design",
-            "Knowledge of manufacturing processes, materials, and tolerances",
-            "Ability to work in a fast-paced and collaborative environment to rapidly prototype and manufacture new products",
-            "Experience with field testing and working in rugged environments"
-        ],
-        "inThisRoleYouWill": [
-            "Own a product vertical with the opportunity to build a team around yourself over time",
-            "Work directly with our internal and external customers to drive our roadmap",
-            "Get to build alongside the best engineers and mining operators in the world",
-            "Be given autonomy and virtually unlimited room to grow",
-            "Travel all over the world"
-        ],
-        "thisMightBeAGoodFitIfYou": [
-            "Have a bias to action, take pride in your work, and care more about getting to the right solution than being right",
-            "Have led critical projects or initiatives",
-            "Have extensive experience shipping modern, full-stack hardware",
-            "Are product-minded and user-driven",
-            "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles"
-        ],
-        "additionalRequirements": [
-            "Must be willing to work from our headquarters in El Segundo",
-            "Must be willing to work extended hours and weekends as needed"
-        ],
-        "salary": "$150,000–$180,000"
-    },
-    {
         "applicationId": "senior-manufacturing-engineer",
         "title": "Senior Manufacturing Engineer",
         "location": "El Segundo, CA",
@@ -269,28 +223,28 @@
         "salary": "$150,000–$180,000"
     },
     {
-        "applicationId": "geotechnical-engineer",
-        "title": "Geotechnical Engineer",
+        "applicationId": "embedded-systems-engineer",
+        "title": "Embedded Systems Engineer",
         "location": "El Segundo, CA",
         "jobType": "Full-Time",
-        "descriptionHeader": "Optimizing Drilling Operations",
-        "description": "As a Geotechnical Engineer at Durin you will analyze geological and drilling data to interpret structures and conditions that impact rig operations. Working closely with engineering and operations teams, you will rapidly iterate on solutions in the field to improve safety, performance, and reliability.",
-        "note": null,
+        "descriptionHeader": "Building the Rig",
+        "description": "We are hiring an embedded systems engineer to develop low-level firmware for sensors, microcontrollers, and communication systems on our autonomous drilling rigs. You’ll rapidly prototype, iterate, and collaborate with the rest of our team, testing in the field daily or weekly.",
+        "isMiningExperienceRequired": false,
         "responsibilities": [
-            "Analyze the mechanical behavior of different rock formations and how they interact with drilling equipment",
-            "Collaborate with engineering to optimize drill designs and automation software for optimal drill performance, speed, and core recovery in various geological conditions",
-            "Use simulation software and laboratory data to model rock behavior under drilling forces, vibrations, and stress conditions",
-            "Conduct field tests to evaluate drill performance in diverse rock types and recommend design improvements",
-            "Develop and implement strategies to minimize drillbit wear, improve penetration rates, and reduce drilling costs",
-            "Produce technical reports and documentation on findings, providing recommendations for design optimizations based on geomechanical data"
+            "Develop and optimize firmware for embedded microcontrollers and industrial-grade equipment",
+            "Integrate and calibrate diverse sensors (pressure, vibration, temperature) for real-time data acquisition and control loops",
+            "Ensure reliable, timing-critical firmware operation in rugged environments, supporting closed-loop automation",
+            "Connect embedded devices to networks (e.g., Starlink) for remote data capture",
+            "Collaborate with mechanical and electrical engineers to align hardware and software integrations from PCB to actuator",
+            "Iterate quickly on firmware and sensor configurations in both lab and field environments"
         ],
         "competencies": [
-            "Experience in rock mechanics, geomechanics, or geotechnical analysis, ideally in mining, construction, or drilling industries",
-            "Proficiency in geomechanical modeling software and CAD tools",
-            "Strong understanding of the mechanical properties of rocks and their response to stress, pressure, and drilling forces",
-            "Field experience in drilling operations and geotechnical surveys",
-            "Knowledge of mineral exploration techniques and drilling equipment",
-            "Experience with field testing and working in rugged environments"
+            "Experience in embedded firmware development, ideally in industrial or heavy machinery contexts",
+            "Strong understanding of real-time operating systems, control algorithms (e.g., PID), and sensor fusion",
+            "Skilled at sensor integration, signal conditioning, and data processing for actionable insights",
+            "Familiarity with industrial communication protocols (CAN bus, Modbus) and wireless solutions",
+            "Proven ability to maintain robustness in challenging conditions (dust, vibration, extreme temperatures)",
+            "Comfortable in a fast-paced, interdisciplinary team environment, rapidly prototyping, testing, and refining code for field-ready performance"
         ],
         "inThisRoleYouWill": [
             "Own a product vertical with the opportunity to build a team around yourself over time",
@@ -302,140 +256,17 @@
         "thisMightBeAGoodFitIfYou": [
             "Have a bias to action, take pride in your work, and care more about getting to the right solution than being right",
             "Have led critical projects or initiatives",
+            "Have extensive experience shipping modern, full-stack firmware",
             "Are product-minded and user-driven",
-            "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles"
+            "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles",
+            "Are a previous or future founder — if you leave Durin to start a company, we'll do everything to support you, including investing in you and introducing you to Durin's investors",
+            "Can work from our Los Angeles headquarters (El Segundo)"
         ],
         "additionalRequirements": [
             "Must be willing to work from our headquarters in El Segundo",
             "Must be willing to work extended hours and weekends as needed"
         ],
         "salary": "$150,000–$180,000"
-    },
-    {
-        "applicationId": "principal-geologist",
-        "title": "Principal Geologist",
-        "location": "El Segundo, CA",
-        "jobType": "Full-Time",
-        "descriptionHeader": "Defining Geological Strategy",
-        "description": "As a Principal Geologist at Durin you will lead advanced geological analysis and strategic exploration for our next-generation drilling programs. You will guide how we interpret subsurface data, improve drill performance, and discover valuable mineral resources through geological modeling and hands-on field verification.",
-        "note": null,
-        "responsibilities": [
-            "Conduct in-depth geological studies by interpreting core samples, geophysical data, and drilling logs to characterize rock formations and resource potential",
-            "Collaborate with engineering teams to refine drill designs, automation algorithms, and drilling parameters for greater speed, core recovery, and cost-efficiency",
-            "Assess rock stability, stress regimes, and hazards to recommend mitigation strategies that reduce drillbit wear and enhance penetration rates in various rock conditions",
-            "Oversee field campaigns, logging operations, and sampling programs, validating geological models and providing real-time feedback on drilling performance",
-            "Partner with software & data engineering to incorporate geological insights into sensor platforms, edge computing algorithms, and real-time data analysis",
-            "Synthesize drilling results, core analyses, and remote sensing data to inform resource estimates, reservoir potential, and future exploration strategies",
-            "Produce high-quality technical documentation, ensuring geological data and interpretations meet company standards and regulatory requirements"
-        ],
-        "competencies": [
-            "Master’s or PhD in Geology, Geosciences, or a related field, with extensive industry experience (mining, oil & gas, or mineral exploration preferred)",
-            "Proven track record using advanced modeling software (e.g., Leapfrog, Petrel) and interpreting geophysical/geochemical data sets",
-            "Deep understanding of rock properties, stress fields, and failure modes under drilling loads, with hands-on experience optimizing drill performance",
-            "Demonstrated ability to design and execute field programs in remote and rugged environments, comfortable leading on-site teams and troubleshooting real-time issues",
-            "Comfortable working with mechanical, robotics, and data-focused teams, translating geological findings into actionable engineering insights",
-            "Familiarity with relevant mining or drilling regulations, industry standards for safety, sampling, and resource reporting",
-            "Desire to leverage cutting-edge technology to enhance resource discovery and drilling efficiency, with the ability to think creatively in a fast-paced environment"
-        ],
-        "inThisRoleYouWill": [
-            "Own a product vertical with the opportunity to build a team around yourself over time",
-            "Work directly with our internal and external customers to drive our roadmap",
-            "Get to build alongside the best engineers and mining operators in the world",
-            "Be given autonomy and virtually unlimited room to grow",
-            "Travel all over the world"
-        ],
-        "thisMightBeAGoodFitIfYou": [
-            "Have a bias to action, take pride in your work, and care more about getting to the right solution than being right",
-            "Have led critical projects or initiatives",
-            "Are product-minded and user-driven",
-            "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles"
-        ],
-        "additionalRequirements": [
-            "Must be willing to work from our headquarters in El Segundo",
-            "Must be willing to work extended hours and weekends as needed"
-        ],
-        "salary": "$150,000–$180,000"
-    },
-    {
-        "applicationId": "shop-field-mechanic",
-        "title": "Shop & Field Mechanic",
-        "location": "Multiple Locations",
-        "jobType": "Contract",
-        "descriptionHeader": "Keeping the Rig Running",
-        "description": "As a Shop & Field Mechanic at Durin, you will lead the maintenance, repair, and optimization of mechanical systems on our drilling rigs—both in-house and at remote field sites. With deep hands-on expertise, you’ll ensure our equipment operates reliably in the toughest conditions and act as a key technical authority when critical issues arise.",
-        "note": "Experience in mining or drilling is highly desired.",
-        "responsibilities": [
-            "Independently perform and lead complex maintenance, diagnostics, and repairs on drilling equipment",
-            "Troubleshoot mechanical, hydraulic, and moderate electrical issues in shop and field environments",
-            "Collaborate with engineering teams to identify design improvements and enhance serviceability",
-            "Document maintenance procedures, part usage, and recurring system failures for feedback into design",
-            "Ensure rigorous adherence to safety standards and lead by example in the field"
-        ],
-        "competencies": [
-            "Extensive experience as a heavy equipment mechanic or field service technician in demanding environments",
-            "Deep knowledge of hydraulic systems, drive systems, and mechanical assemblies",
-            "Ability to interpret technical drawings, schematics, and rig documentation for troubleshooting and repairs",
-            "Exceptional field-repair skills, with a proven record of solving critical equipment issues",
-            "Familiarity with electrical wiring, control systems, and PLCs is a strong plus"
-        ],
-        "inThisRoleYouWill": [
-            "Travel to various locations to ensure rigs operate at peak performance",
-            "Act as a key liaison between shop-based engineering teams and on-site operations",
-            "Play a vital role in feedback loops that drive product improvements"
-        ],
-        "thisMightBeAGoodFitIfYou": [
-            "Take pride in your work, and care more about getting to the right solution than being right",
-            "Are adaptable under pressure and adept at troubleshooting in real-time",
-            "Have strong initiative and the ability to operate independently",
-            "Enjoy collaborating in a fast-paced environment with rapid iteration cycles",
-            "Are motivated by the opportunity to work at the intersection of mining expertise and groundbreaking technology"
-        ],
-        "additionalRequirements": [
-            "Willing to travel and work on-site at field locations",
-            "Able to work extended hours and weekends when needed"
-        ],
-        "salary": "$30–$50 per hour"
-    },
-    {
-        "applicationId": "diamond-driller",
-        "title": "Diamond Driller",
-        "location": "Multiple Locations",
-        "jobType": "Contract",
-        "descriptionHeader": "Running the Rig",
-        "description": "We are hiring a driller to lead diamond core drilling operations, manage crews, and ensure efficient sampling. You'll work closely with engineers, using your field expertise to test and improve autonomous drilling systems. This is a hands-on role with a direct impact on both operations and product development.",
-        "note": null,
-        "responsibilities": [
-            "Lead diamond core drilling operations, managing crews, and ensuring efficient and accurate sampling",
-            "Monitor rig performance, identify challenges, and collaborate with engineering teams to implement practical solutions",
-            "Maintain high safety standards, productivity, and adherence to operational procedures in the field",
-            "Contribute to field testing of new drilling technologies, validating performance and offering actionable input for improvements",
-            "Keep detailed records of drilling activities, performance metrics, and equipment issues to guide engineering updates"
-        ],
-        "competencies": [
-            "Extensive experience in diamond core drilling or similar precision drilling operations",
-            "Proven leadership and team management skills in field environments",
-            "Ability to identify operational challenges and communicate them effectively to engineering teams",
-            "Strong understanding of drilling systems, including hydraulics, fluid circulation, and rig mechanics",
-            "Comfortable working in rugged, remote environments while prioritizing safety and efficiency",
-            "Excellent communication skills to collaborate with engineers and technical teams",
-            "Flexible and driven to adapt in fast-paced, high-iteration development settings"
-        ],
-        "inThisRoleYouWill": [
-            "Lead drilling operations critical to technological development and production of future rigs",
-            "Oversee drilling projects with the potential to build and grow your own team over time",
-            "Get to build alongside the best engineers, explorers, and mine operators in the world"
-        ],
-        "thisMightBeAGoodFitIfYou": [
-            "Take pride in your work, and care more about getting to the right solution than being right",
-            "Have led critical projects or high-stakes initiatives",
-            "Enjoy collaborating in a fast-paced environment with rapid iteration cycles",
-            "Are motivated by the opportunity to work at the intersection of mining expertise and groundbreaking technology"
-        ],
-        "additionalRequirements": [
-            "Willing to travel and work on-site at field locations",
-            "Able to work extended hours and weekends when needed"
-        ],
-        "salary": "$30–$50 per hour"
     },
     {
         "applicationId": "general-application",
@@ -450,5 +281,4 @@
         "thisMightBeAGoodFitIfYou": [],
         "additionalRequirements": [],
         "salary": null
-    }
-]
+    }]

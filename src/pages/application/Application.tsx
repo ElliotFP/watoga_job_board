@@ -92,7 +92,7 @@ const Application = () => {
                 <Text mb={[3, 5]} opacity={0.65} fontSize="14px" color="whiteAlpha.900">{curApp.location}</Text>
 
                 <Text mb={[3, 4]} fontSize={["sm", "sm"]} color="whiteAlpha.900">
-                    Durin was founded under the belief that raw materials should not be a constraint on human progress. We are actively developing the technologies to make this possible, with the ultimate goal of becoming the bedrock of the global supply chain.
+                    Watoga was founded under the belief that we shouldn&apos;t waste what the earth has to offer. We are developing the technologies to make mineral extraction more efficient and capture the full wealth of the subsurface by solving the information and automation challenges of mining. It is our mission to make mines fully autonomous and cherish what the earth has to offer.
                 </Text>
 
                 <Divider my={[4, 6]} />
@@ -100,13 +100,13 @@ const Application = () => {
                 <Box className="pl-4 md:pl-8 [&>ul]:mb-4 [&>ul>li]:mb-1.5 md:[&>ul>li]:mb-1 [&>ul>li]:leading-[1.5] md:[&>ul>li]:leading-[1.6]">
                     <SectionHeader>Who We Are</SectionHeader>
                     <Text mb={4} fontSize="sm" color="whiteAlpha.900">
-                        Durin builds and operates automated drill rigs to accelerate mineral discovery.
+                        Watoga builds software and sensors to automate and optimize the entirety of the mining operation. 
                         <br />
                         <br />
-                        Modern life, from smartphones to skyscrapers, starts as ore in the ground. But mines do not simply appear. Valuable ore is rare, so in advance, Geologists must explore, observe, test, and survey—a process that takes significant time and resources. Building a mine today is a billion dollar endeavor, so precise data is key. This is done by drilling hundreds of holes into the earth to recover cylindrical core samples in the search for valuable material.
+                        Modern life, from smartphones to skyscrapers, starts as ore in the ground. But mines do not simply appear. Valuable ore is rare, but the time constraints of mining and lack of information about the subsurface causes modern mines to send tons of ore to waste and leave billions of dollars on the table.
                         <br />
                         <br />
-                        Although the mining industry is worth $2.4 trillion, mineral exploration has hardly changed in over 70 years. Our mission is to change that. The first step is the development and mass-production of drilling rigs with automated controls and real-time data streams to increase safety, accuracy, and efficiency. That is just the beginning. <a href="https://learn.durin.com" target="_blank" rel="noopener noreferrer" className="underline text-[#0070f3] ml-0.5">Learn more</a>
+                        Although the mining industry is worth $2.4 trillion, a lot of mining operations still operate with old technology and outdated practices. It is our mission to maximize the use of existing data and enrich it with better instrumentalization to build a future in which fully autonomous mining is a reality, where the earth&apos;s resources are used to their fullest extent. This is just the beginning. <a href="https://watoga.tech" target="_blank" rel="noopener noreferrer" className="underline text-[#0070f3] ml-0.5">Learn more</a>
                     </Text>
 
                     <Divider my={6} />
@@ -137,10 +137,10 @@ const Application = () => {
                             {!isContractPosition ? (
                                 <>
                                     <Text mb={4} fontSize="sm" color="whiteAlpha.900">
-                                        This role will pay <b>{curApp.salary}</b>, plus <b>significant equity</b>, so you have a real stake in Durin&apos;s success. Everyone is an owner, so as the company grows, your equity grows too.
+                                        This role will pay <b>{curApp.salary}</b>, plus <b>significant equity</b>, so you have a real stake in Watoga&apos;s success. We are all in this journey together. 
                                     </Text>
                                     <Text mb={4} fontSize="sm" color="whiteAlpha.900">Aside from base compensation, we invest heavily in our team. You&apos;ll have the freedom and resources to experiment and iterate quickly. We&apos;re a high-growth company with no middle management, which translates to fast decision making and the ability for you to own major initiatives from day one.</Text>
-                                    <Text mb={6} fontSize="sm" color="whiteAlpha.900">We also offer 100% healthcare coverage (medical, dental, vision), all meals (breakfast, lunch, dinner) are paid for when you&apos;re at headquarters, and we can help you find housing nearby.</Text>
+                                    <Text mb={6} fontSize="sm" color="whiteAlpha.900">All meals (breakfast, lunch, dinner) are paid for when you&apos;re at headquarters. You&apos;ll also have a room at our headquartes in Montreal provided, if you wish to stay there - we&apos;ll be booking a penthouse for the office and having the whole team stay there. </Text>
                                 </>
                             ) : (
                                 <Text mb={4} fontSize="sm" color="whiteAlpha.900">This role pays <b>{curApp.salary}</b> as a contractor. We value expertise and will ensure everyone on our team is compensated fairly for their critical contributions to our ambitious goals.</Text>
@@ -156,7 +156,7 @@ const Application = () => {
                     ) : (
                         <>
                             <SectionHeader>What We&apos;re Looking For</SectionHeader>
-                            <Text mb={4} fontSize="sm">We&apos;re always interested in meeting exceptional people across various disciplines, including:</Text>
+                            <Text mb={4} fontSize="sm" color="whiteAlpha.900">We&apos;re always interested in meeting exceptional people across various disciplines, including:</Text>
                             <BulletList items={[
                                 "Software Engineers (Full-stack, Frontend, Backend, ML/AI)",
                                 "Hardware Engineers (Mechanical, Electrical, Controls)",
@@ -192,7 +192,7 @@ const Application = () => {
                         </>
                     )}
 
-                    <Text fontSize="md" mt={8} color="whiteAlpha.900" fontFamily="Lekton">Join Durin to build the future of mining. If you&apos;re passionate about making a real-world impact and solving complex challenges, we&apos;d love to hear from you.</Text>
+                    <Text fontSize="md" mt={8} color="whiteAlpha.900" fontFamily="Lekton">Join Watoga to build the future of mining. If you&apos;re passionate about making a real-world impact and solving complex challenges, we&apos;d love to hear from you.</Text>
                 </Box>
             </Box>
 

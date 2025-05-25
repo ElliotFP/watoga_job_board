@@ -50,7 +50,7 @@ const Navbar = ({
                     textTransform="uppercase"
                     cursor="pointer"
                     fontFamily="Lekton"
-                    onClick={() => window.open('https://watoga.com', '_blank')}
+                    onClick={() => window.open('https://watoga.tech', '_blank')}
                     color="whiteAlpha.900"
                     fontSize="32px"
                     fontWeight="semibold"
