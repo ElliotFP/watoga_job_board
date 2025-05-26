@@ -44,12 +44,58 @@
         "salary": "$150,000–$180,000"
     },
     {
-        "applicationId": "senior-software-engineer",
-        "title": "Senior Software Engineer",
-        "location": "El Segundo, CA",
+        "applicationId": "machine-learning-engineer-geology",
+        "title": "Machine Learning Engineer - Geology",
+        "location": "Montreal, CA",
         "jobType": "Full-Time",
-        "descriptionHeader": "Building the System",
-        "description": "As a Senior Software Engineer at Durin you will lead the architecture and development of end-to-end software systems that run large networks of next-generation industrial machinery. Your responsibilities include application deployments, geological data interpretation, and data-driven automation.",
+        "descriptionHeader": "Building the bench prediction model",
+        "description": "As a Machine Learning engineer at Watoga you will lead the architecture and development of end-to-end software systems that run large networks of next-generation industrial machinery. Your responsibilities include application deployments, geological data interpretation, and data-driven automation.",
+        "note": "You don't need mining or drilling experience to excel in this role.",
+        "responsibilities": [
+            "Design and deploy backend/frontend systems that handle real-time sensor data, remote control, and third-party integrations",
+            "Implement CI/CD, automated monitoring, and self-healing infrastructure to ensure high availability and reduce manual intervention",
+            "Develop security frameworks and data protection policies to meet regulatory standards and protect sensitive information",
+            "Optimize microservices and data pipelines to handle large-scale, rapidly growing datasets from drilling operations",
+            "Manage core infrastructure (databases, storage, monitoring, logging) both on-premises at rig sites and in public cloud environments",
+            "Drive edge-computing strategies for low-latency analytics, machine learning, and autonomous decision-making on the rigs themselves",
+            "Collaborate with engineers and field teams to deliver end-to-end solutions from concept to field validation and hand-off"
+        ],
+        "competencies": [
+            "Proven success designing and scaling enterprise software in cloud-based, distributed, and microservice environments",
+            "Skilled in multiple programming languages (e.g., Python, TypeScript, Golang) and modern frontend frameworks (React, Next.js), with strong architectural principles",
+            "Experience with SQL/NoSQL databases, real-time analytics, and data pipelines handling large, streaming telemetry",
+            "Deep knowledge of cloud platforms (AWS, Azure, GCP), edge computing strategies, and event-driven architectures",
+            "Demonstrated ability to diagnose bottlenecks, optimize performance, and deliver reliable, high-traffic services in demanding or remote settings",
+            "Solid security mindset, including expertise in authentication, encryption, and compliance (e.g., SOC2, ISO 27001)",
+            "Industrial or hardware-adjacent experience (real-time data acquisition, embedded systems, rugged environments) is a plus"
+        ],
+        "inThisRoleYouWill": [
+            "Own a product vertical with the opportunity to build a team around yourself over time",
+            "Work directly with our internal and external customers to drive our roadmap",
+            "Get to build alongside the best engineers and mining operators in the world",
+            "Be given autonomy and virtually unlimited room to grow",
+            "Travel all over the world"
+        ],
+        "thisMightBeAGoodFitIfYou": [
+            "Have a bias to action, take pride in your work, and care more about getting to the right solution than being right",
+            "Have led critical projects or initiatives",
+            "Have extensive experience shipping modern, full-stack software",
+            "Are product-minded and user-driven",
+            "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles"
+        ],
+        "additionalRequirements": [
+            "Must be willing to work from our headquarters in El Segundo",
+            "Must be willing to work extended hours and weekends as needed"
+        ],
+        "salary": "$150,000–$180,000"
+    },
+    {
+        "applicationId": "machine-learning-engineer-planning",
+        "title": "Machine Learning Engineer - Plan Design",
+        "location": "Montreal, CA",
+        "jobType": "Full-Time",
+        "descriptionHeader": "Building the bench prediction model",
+        "description": "As a Machine Learning engineer at Watoga you will lead the architecture and development of end-to-end software systems that run large networks of next-generation industrial machinery. Your responsibilities include application deployments, geological data interpretation, and data-driven automation.",
         "note": "You don't need mining or drilling experience to excel in this role.",
         "responsibilities": [
             "Design and deploy backend/frontend systems that handle real-time sensor data, remote control, and third-party integrations",
