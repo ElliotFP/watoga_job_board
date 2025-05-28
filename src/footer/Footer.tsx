@@ -1,7 +1,14 @@
 import { Flex, Image, Text } from '@chakra-ui/react';
 import watogaLogo from '../assets/watoga_logo.svg';
+import { useState, useEffect } from 'react';
 
 const Footer = () => {
+    const [year, setYear] = useState('');
+
+    useEffect(() => {
+        setYear(new Date().getFullYear().toString());
+    }, []);
+
     return (
         <Flex
             as="footer"
@@ -30,7 +37,7 @@ const Footer = () => {
                 textAlign="center"
                 px={[2, 0]}
             >
-                © {new Date().getFullYear()} Watoga Technologies Inc.. All rights reserved.
+                © {year} Watoga Technologies Inc.. All rights reserved.
             </Text>
         </Flex>
     );

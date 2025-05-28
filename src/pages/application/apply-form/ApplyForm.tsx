@@ -17,7 +17,7 @@ const supabase = createClient(
 );
 
 const RequiredStar = () => (
-    <span className="text-red-500 pl-0.5">*</span>
+    <span className="text-green-500 pl-0.5">*</span>
 );
 
 const validationSchema = (props: { isContract: boolean }) => Yup.object().shape({
@@ -177,7 +177,7 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
     };
 
     return (
-        <div className="px-4 md:px-8 py-3 md:py-6 mx-auto max-w-2xl text-[#515357] ">
+        <div className="px-4 md:px-8 py-3 md:py-6 mx-auto max-w-2xl text-stone-300">
             <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema({ isContract })}
@@ -191,7 +191,7 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
                         <div className="flex flex-col gap-4 md:gap-6">
                             {/* SUBMIT YOUR APPLICATION */}
                             <span
-                                className="font-bold uppercase text-[15px] md:text-[17px] text-[#515357] mb-3 md:mb-4"
+                                className="font-bold uppercase text-[24px] text-white mb-3 md:mb-4"
                             >
                                 Submit Your Application
                             </span>
@@ -314,7 +314,7 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
                                 <>
                                     {/* LINKS */}
                                     <span
-                                        className="font-bold uppercase text-[15px] md:text-[17px] text-[#515357] mb-2 md:mb-2 mt-6 md:mt-8"
+                                        className="font-bold uppercase text-[20px]  text-white mb-2 md:mb-2 mt-6 md:mt-8"
                                     >
                                         Links
                                     </span>
@@ -388,7 +388,7 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
 
                                     {/* AVAILABILITY */}
                                     <span
-                                        className="font-bold uppercase text-[15px] md:text-[17px] text-[#515357] mb-2 md:mb-2 mt-6 md:mt-8"
+                                        className="font-bold uppercase text-[20px] text-white mb-2 md:mb-2 mt-6 md:mt-8"
                                     >
                                         Availability
                                     </span>
@@ -444,7 +444,7 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
 
                                     {/* ABOUT YOU */}
                                     <span
-                                        className="font-bold uppercase text-[15px] md:text-[17px] text-[#515357] mb-2 md:mb-2 mt-6 md:mt-8"
+                                        className="font-bold uppercase text-[20px] text-white mb-2 md:mb-2 mt-6 md:mt-8"
                                     >
                                         About You
                                     </span>
@@ -494,7 +494,7 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
 
                             {/* ADDITIONAL INFORMATION */}
                             <span
-                                className="font-bold uppercase text-[15px] md:text-[17px] text-[#515357] mb-2 md:mb-2 mt-4 md:mt-6"
+                                className="font-bold uppercase text-[20px] text-white mb-2 md:mb-2 mt-4 md:mt-6"
                             >
                                 Additional Information
                             </span>
@@ -518,7 +518,7 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
                             <Button
                                 className="mt-3 md:mt-4"
                                 type="submit"
-                                colorScheme="blue"
+                                colorScheme="green"
                                 size={["md", "lg"]}
                                 width={["100%", "auto"]}
                                 disabled={isSubmitting}
