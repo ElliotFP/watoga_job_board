@@ -1,4 +1,6 @@
+import { Fragment } from 'react';
 // import Banner from '../components/Banner';
+
 import OpenPositions from '../pages/positions/Positions';
 
 export default function Home() {

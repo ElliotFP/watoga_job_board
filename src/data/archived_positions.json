@@ -1,5 +1,51 @@
 [
     {
+        "applicationId": "senior-controls-engineer",
+        "title": "Senior Controls Engineer",
+        "location": "Montreal, CA",
+        "jobType": "Full-Time",
+        "descriptionHeader": "Automating the Rig",
+        "description": "As an Senior Controls Engineer at Watoga you will be directly responsible for designing and deploying the core control systems that power next-generation drilling rigs. You will automate drilling operations, integrate sensors and actuators for real-time data, and ensure the rigs run safely and reliably in the field.",
+        "note": "You don't need mining or drilling experience to excel in this role.",
+        "responsibilities": [
+            "Design, simulate, and implement PLC-based control architectures for autonomous drilling and related processes (material handling, core sample retrieval, etc.)",
+            "Select and integrate sensors (pressure, force, temperature, position) and actuators for real-time data acquisition and precise motion control in rugged field conditions",
+            "Implement fail-safe electrical circuits and safety-rated software to protect operators, equipment, and surrounding environment",
+            "Create intuitive HMI screens and SCADA systems to simplify monitoring, diagnostics, and control of complex machinery",
+            "Work closely with mechanical, robotics, and software teams to align control solutions with overall rig design and manufacturing goals",
+            "Rapidly prototype, troubleshoot, and validate control solutions in both lab and harsh field environments"
+        ],
+        "competencies": [
+            "Experience designing, programming, and commissioning industrial automation systems (PLC, servo drives, robotics)",
+            "In-depth knowledge of at least one major PLC platform (e.g., Beckhoff TwinCAT, Allen-Bradley, Siemens) and familiarity with structured text, ladder logic, or state-machine programming",
+            "Experience integrating servo controllers, VFDs, safety PLCs, and fail-safe circuits (working knowledge of industrial robots such as KUKA, ABB, or Fanuc is a plus)",
+            "Practical understanding of fieldbus networks (EtherCAT, Profinet, Ethernet/IP) and networking concepts for distributed I/O and real-time data flows",
+            "Familiarity with industrial standards (NEC, NFPA, UL508A) for electrical panel design, component sizing, and installation in potentially hazardous environments",
+            "Experience with field testing and working in rugged environments"
+        ],
+        "inThisRoleYouWill": [
+            "Own a product vertical with the opportunity to build a team around yourself over time",
+            "Work directly with our internal and external customers to drive our roadmap",
+            "Get to build alongside the best engineers and mining operators in the world",
+            "Be given autonomy and virtually unlimited room to grow",
+            "Travel all over the world"
+        ],
+        "thisMightBeAGoodFitIfYou": [
+            "Have a bias to action, take pride in your work, and care more about getting to the right solution than being right",
+            "Have led critical projects or initiatives",
+            "Have extensive experience shipping modern, full-stack hardware",
+            "Are product-minded and user-driven",
+            "Have a strong first-principled way of thinking",
+            "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles"
+        ],
+        "additionalRequirements": [
+            "Must be willing to work from our headquarters in Montreal",
+            "Must be willing to work extended hours and weekends as needed"
+        ],
+        "salary": "$150,000–$180,000"
+    },
+
+    {
         "applicationId": "legal-counsel",
         "title": "Legal Counsel",
         "location": "El Segundo, CA",

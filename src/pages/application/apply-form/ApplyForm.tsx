@@ -221,7 +221,7 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
                                         {({ field }: FieldProps) => (
                                             <input
                                                 {...field}
-                                                className="w-full p-2 text-[#111] text-sm md:text-base bg-white"
+                                                className="w-full p-2 text-[#111] text-sm md:text-base bg-stone-100 rounded-sm"
                                                 type="text"
                                                 autoComplete="given-name"
                                                 onChange={(e) => {
@@ -245,7 +245,7 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
                                         {({ field }: FieldProps) => (
                                             <input
                                                 {...field}
-                                                className="w-full p-2 text-[#111] text-sm md:text-base bg-white"
+                                                className="w-full p-2 text-[#111] text-sm md:text-base bg-stone-100 rounded-sm"
                                                 type="text"
                                                 autoComplete="family-name"
                                                 onChange={(e) => {
@@ -269,7 +269,7 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
                                         {({ field }: FieldProps) => (
                                             <input
                                                 {...field}
-                                                className="w-full p-2 text-[#111] text-sm md:text-base bg-white"
+                                                className="w-full p-2 text-[#111] text-sm md:text-base bg-stone-100 rounded-sm"
                                                 type="email"
                                                 autoComplete="email"
                                                 onChange={(e) => {
@@ -292,8 +292,8 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
                                     <Field name="phone">
                                         {({ field }: FieldProps) => (
                                             <input
-                                                {...field}
-                                                className="w-full p-2 text-[#111] text-sm md:text-base bg-white"
+                                                {...field}  
+                                                className="w-full p-2 text-[#111] text-sm md:text-base bg-stone-100 rounded-sm"
                                                 type='tel'
                                                 autoComplete='tel'
                                                 onChange={(e) => {
@@ -327,7 +327,7 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
                                                 {({ field }: FieldProps) => (
                                                     <input
                                                         {...field}
-                                                        className="w-full p-2 text-[#111] text-sm md:text-base bg-white"
+                                                        className="w-full p-2 text-[#111] text-sm md:text-base bg-stone-100 rounded-sm"
                                                         autoComplete='web'
                                                         onChange={(e) => {
                                                             field.onChange(e);
@@ -349,7 +349,7 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
                                                 {({ field }: FieldProps) => (
                                                     <input
                                                         {...field}
-                                                        className="w-full p-2 text-[#111] text-sm md:text-base bg-white"
+                                                        className="w-full p-2 text-[#111] text-sm md:text-base bg-stone-100 rounded-sm"
                                                         autoComplete="url"
                                                         onChange={(e) => {
                                                             field.onChange(e);
@@ -392,53 +392,57 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
                                     >
                                         Availability
                                     </span>
-                                    <div className="grid grid-cols-1 md:grid-cols-[210px_1fr] gap-3 md:gap-6">
-                                        <div className="flex items-start md:items-center text-sm md:text-base">
-                                            Currently in LA or willing to relocate immediately?<RequiredStar />
-                                        </div>
-                                        <div className="relative">
-                                            <Field name="willingToRelocate">
-                                                {({ field, form }: FieldProps) => (
-                                                    <Select
-                                                        options={selectOptions}
-                                                        value={selectOptions.find(option => option.value === field.value)}
-                                                        onChange={(option) => {
-                                                            form.setFieldValue(field.name, option?.value ?? SelectBoolean.Select);
-                                                            setFieldError('willingToRelocate', '');
-                                                        }}
-                                                        placeholder="Select"
-                                                        className="basic-select"
-                                                        classNamePrefix="select"
-                                                    />
+                                    <div className="flex flex-col gap-2 md:gap-4">
+                                        <div className="flex flex-row gap-2 md:gap-4">
+                                            <div className="flex items-start md:items-center text-sm md:text-base w-[320px]">
+                                                Currently in Montreal or willing to relocate immediately?<RequiredStar />
+                                            </div>
+                                            <div className="relative flex-1">
+                                                <Field name="willingToRelocate">
+                                                    {({ field, form }: FieldProps) => (
+                                                        <Select
+                                                            options={selectOptions}
+                                                            value={selectOptions.find(option => option.value === field.value)}
+                                                            onChange={(option) => {
+                                                                form.setFieldValue(field.name, option?.value ?? SelectBoolean.Select);
+                                                                setFieldError('willingToRelocate', '');
+                                                            }}
+                                                            placeholder="Select"
+                                                            className="basic-select bg-stone-100 rounded-sm"
+                                                            classNamePrefix="select"
+                                                        />
+                                                    )}
+                                                </Field>
+                                                {touched.willingToRelocate && errors.willingToRelocate && (
+                                                    <ErrorMessage message={errors.willingToRelocate as string} />
                                                 )}
-                                            </Field>
-                                            {touched.willingToRelocate && errors.willingToRelocate && (
-                                                <ErrorMessage message={errors.willingToRelocate as string} />
-                                            )}
+                                            </div>
                                         </div>
 
-                                        <div className="flex items-start md:items-center text-sm md:text-base">
-                                            Willing to work intense hours?<RequiredStar />
-                                        </div>
-                                        <div className="relative">
-                                            <Field name="willingToWorkIntense">
-                                                {({ field, form }: FieldProps) => (
-                                                    <Select
-                                                        options={selectOptions}
-                                                        value={selectOptions.find(option => option.value === field.value)}
-                                                        onChange={(option) => {
-                                                            form.setFieldValue(field.name, option?.value ?? SelectBoolean.Select);
-                                                            setFieldError('willingToWorkIntense', '');
-                                                        }}
-                                                        placeholder="Select"
-                                                        className="basic-select"
-                                                        classNamePrefix="select"
-                                                    />
+                                        <div className="flex flex-row gap-2 md:gap-4">
+                                            <div className="flex items-start md:items-center text-sm md:text-base w-[320px]">
+                                                Willing to work intense hours?<RequiredStar />
+                                            </div>
+                                            <div className="relative flex-1">
+                                                <Field name="willingToWorkIntense">
+                                                    {({ field, form }: FieldProps) => (
+                                                        <Select
+                                                            options={selectOptions}
+                                                            value={selectOptions.find(option => option.value === field.value)}
+                                                            onChange={(option) => {
+                                                                form.setFieldValue(field.name, option?.value ?? SelectBoolean.Select);
+                                                                setFieldError('willingToWorkIntense', '');
+                                                            }}
+                                                            placeholder="Select"
+                                                            className="basic-select bg-stone-100 rounded-sm"
+                                                            classNamePrefix="select"
+                                                        />
+                                                    )}
+                                                </Field>
+                                                {touched.willingToWorkIntense && errors.willingToWorkIntense && (
+                                                    <ErrorMessage message={errors.willingToWorkIntense as string} />
                                                 )}
-                                            </Field>
-                                            {touched.willingToWorkIntense && errors.willingToWorkIntense && (
-                                                <ErrorMessage message={errors.willingToWorkIntense as string} />
-                                            )}
+                                            </div>
                                         </div>
                                     </div>
 
@@ -455,7 +459,7 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
                                                 {({ field }: FieldProps) => (
                                                     <textarea
                                                         {...field}
-                                                        className="w-full p-2 text-[#111] text-sm md:text-base bg-white"
+                                                        className="w-full p-2 text-[#111] text-sm md:text-base bg-stone-100 rounded-sm"
                                                         style={{ minHeight: '120px' }}
                                                         onChange={(e) => {
                                                             field.onChange(e);
@@ -475,7 +479,7 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
                                                 {({ field }: FieldProps) => (
                                                     <textarea
                                                         {...field}
-                                                        className="w-full p-2 text-[#111] text-sm md:text-base bg-white"
+                                                        className="w-full p-2 text-[#111] text-sm md:text-base bg-stone-100 rounded-sm"
                                                         style={{ minHeight: '120px' }}
                                                         onChange={(e) => {
                                                             field.onChange(e);
@@ -503,7 +507,7 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
                                     {({ field }: FieldProps) => (
                                         <textarea
                                             {...field}
-                                            className="w-full p-2 text-[#111] text-sm md:text-base bg-white"
+                                            className="w-full p-2 text-[#111] text-sm md:text-base bg-stone-100 rounded-sm"
                                             style={{ minHeight: '120px' }}
                                             placeholder="Tell us anything else you think we should know. We read every word."
                                             onChange={(e) => {

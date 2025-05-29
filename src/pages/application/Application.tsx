@@ -100,13 +100,13 @@ const Application = () => {
                 <Box className="pl-4 md:pl-8 [&>ul]:mb-4 [&>ul>li]:mb-1.5 md:[&>ul>li]:mb-1 [&>ul>li]:leading-[1.5] md:[&>ul>li]:leading-[1.6]">
                     <SectionHeader>Who We Are</SectionHeader>
                     <Text mb={4} fontSize="sm" color="whiteAlpha.900">
-                        Watoga builds software and sensors to automate and optimize the entirety of the mining operation. 
+                        Watoga builds software and sensors to automate and optimize the entirety of the mining operation. Our first step is automating and optimizing the drill and blast process, which means understand what's in the rock and how to blow it up efficiently.
                         <br />
                         <br />
-                        Modern life, from smartphones to skyscrapers, starts as ore in the ground. But mines do not simply appear. Valuable ore is rare, but the time constraints of mining and lack of information about the subsurface causes modern mines to send tons of ore to waste and leave billions of dollars on the table.
+                        Modern life, from smartphones to skyscrapers, starts as ore in the ground. Valuable ore is rare, but the time constraints of mining and lack of information about the subsurface causes modern mines to send tons of ore to waste and leave billions of dollars on the table.
                         <br />
                         <br />
-                        Despite being a $2.4 trillion industry, modern mines are still dominated by a lot of guess-work and a lot of manual work. We are building a system to automate mines by adding the required sensors and using the existing data infrastructure to make a digital twin of the operating mine that can update itself in real-time as the data is collected. This is just the beginning. <a href="https://watoga.tech" target="_blank" rel="noopener noreferrer" className="underline text-green-500 ml-0.5">Learn more</a>
+                        Although the mining industry is worth $2.4 trillion, a lot of mining operations still operate with old technology and outdated practices. It is our mission to maximize the use of existing data and enrich it with better instrumentalization to build a future in which fully autonomous mining is a reality, where the earth&apos;s resources are used to their fullest extent. This is just the beginning. <a href="https://watoga.tech" target="_blank" rel="noopener noreferrer" className="underline text-green-500 ml-0.5">Learn more</a>
                     </Text>
 
                     <Divider my={6} />
