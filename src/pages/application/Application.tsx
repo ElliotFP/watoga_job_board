@@ -92,7 +92,7 @@ const Application = () => {
                 <Text mb={[3, 5]} opacity={0.65} fontSize="14px" color="whiteAlpha.900">{curApp.location}</Text>
 
                 <Text mb={[3, 4]} fontSize={["sm", "sm"]} color="whiteAlpha.900">
-                    Watoga was founded under the belief that we shouldn&apos;t waste what the earth has to offer. We are developing the technologies to make mineral extraction more efficient and capture the full wealth of the subsurface by solving the information and automation challenges of mining. It is our mission to make mines fully autonomous and cherish what the earth has to offer.
+                    Watoga was founded under the belief that we shouldn&apos;t waste what the earth has to offer. We are developing the technologies to make mineral extraction more efficient and capture the full wealth of the subsurface by solving the information and automation challenges of mining. It is our mission to make mines fully autonomous and cherish our mineral wealth.
                 </Text>
 
                 <Divider my={[4, 6]} />
@@ -100,10 +100,10 @@ const Application = () => {
                 <Box className="pl-4 md:pl-8 [&>ul]:mb-4 [&>ul>li]:mb-1.5 md:[&>ul>li]:mb-1 [&>ul>li]:leading-[1.5] md:[&>ul>li]:leading-[1.6]">
                     <SectionHeader>Who We Are</SectionHeader>
                     <Text mb={4} fontSize="sm" color="whiteAlpha.900">
-                        Watoga builds software and sensors to automate and optimize the entirety of the mining operation. Our first step is automating and optimizing the drill and blast process, which means understand what's in the rock and how to blow it up efficiently.
+                        Watoga builds software and sensors to automate and optimize the entirety of the mining operation. Our first step is the drill and blast process, which means understanding what's in the rock and how to blast it efficiently.
                         <br />
                         <br />
-                        Modern life, from smartphones to skyscrapers, starts as ore in the ground. Valuable ore is rare, but the time constraints of mining and lack of information about the subsurface causes modern mines to send tons of ore to waste and leave billions of dollars on the table.
+                        Everything around us starts as ore in the ground. Valuable ore is rare, but the time constraints of mining and the lack of information about the subsurface causes modern mines to send tons of ore to waste and leave billions of dollars on the table.
                         <br />
                         <br />
                         Although the mining industry is worth $2.4 trillion, a lot of mining operations still operate with old technology and outdated practices. It is our mission to maximize the use of existing data and enrich it with better instrumentalization to build a future in which fully autonomous mining is a reality, where the earth&apos;s resources are used to their fullest extent. This is just the beginning. <a href="https://watoga.tech" target="_blank" rel="noopener noreferrer" className="underline text-green-500 ml-0.5">Learn more</a>
