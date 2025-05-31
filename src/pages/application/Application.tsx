@@ -3,29 +3,26 @@
 import OPEN_POSITIONS from '../../data/open_positions.json';
 import Navbar from '../../navbar/Navbar';
 import { useRouter, useParams } from 'next/navigation';
-import { Box, Button, Text, Heading, Center, Divider, VStack, useBreakpointValue } from '@chakra-ui/react';
+import { Box, Button, Text, Heading, Center, Divider, VStack } from '@chakra-ui/react';
 import { BulletList } from '../../components/BulletList';
 import { SectionHeader } from '../../components/SectionHeader';
 import ApplyForm from './apply-form/ApplyForm';
-import { useRef, useEffect, useState } from 'react';
+import { useRef } from 'react';
 import { Toaster } from 'react-hot-toast';
 import Footer from '../../footer/Footer';
 import { ApplicationDetails } from '../../types/application';
+import { useMediaQuery } from '@chakra-ui/react';
 
 const Application = () => {
     const router = useRouter();
     const params = useParams();
     const applicationId = params?.applicationId as string;
-    const [topPadding, setTopPadding] = useState(72); // Default to desktop value
-
-    const breakpointValue = useBreakpointValue({ base: 52, md: 72 });
-
-    useEffect(() => {
-        if (breakpointValue !== undefined) {
-            setTopPadding(breakpointValue);
-        }
-    }, [breakpointValue]);
-
+    const [isMobile] = useMediaQuery("(max-width: 48em)", {
+        ssr: true,
+        fallback: false // false = desktop first
+    });
+    
+    const topPadding = isMobile ? 52 : 72;
     const curApp = OPEN_POSITIONS.find((job) => job.applicationId === applicationId) as ApplicationDetails | undefined;
 
     const isContractPosition = curApp?.jobType === "Contract";
