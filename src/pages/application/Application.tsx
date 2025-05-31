@@ -7,7 +7,7 @@ import { Box, Button, Text, Heading, Center, Divider, VStack, useBreakpointValue
 import { BulletList } from '../../components/BulletList';
 import { SectionHeader } from '../../components/SectionHeader';
 import ApplyForm from './apply-form/ApplyForm';
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { Toaster } from 'react-hot-toast';
 import Footer from '../../footer/Footer';
 import { ApplicationDetails } from '../../types/application';
@@ -16,8 +16,16 @@ const Application = () => {
     const router = useRouter();
     const params = useParams();
     const applicationId = params?.applicationId as string;
+    const [topPadding, setTopPadding] = useState(72); // Default to desktop value
 
-    const topPadding = useBreakpointValue({ base: 52, md: 72 });
+    const breakpointValue = useBreakpointValue({ base: 52, md: 72 });
+
+    useEffect(() => {
+        if (breakpointValue !== undefined) {
+            setTopPadding(breakpointValue);
+        }
+    }, [breakpointValue]);
+
     const curApp = OPEN_POSITIONS.find((job) => job.applicationId === applicationId) as ApplicationDetails | undefined;
 
     const isContractPosition = curApp?.jobType === "Contract";
@@ -30,7 +38,7 @@ const Application = () => {
         const element = applicationFormRef?.current;
         if (element) {
             const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-            window.scrollTo({ top: elementPosition - (topPadding ?? 0) });
+            window.scrollTo({ top: elementPosition - topPadding });
             element.querySelectorAll('input')[1]?.focus(); // focus first name field
         }
     }
