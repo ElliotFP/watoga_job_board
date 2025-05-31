@@ -22,6 +22,7 @@ const Application = () => {
 
     const isContractPosition = curApp?.jobType === "Contract";
     const isGeneralApplication = applicationId === "general-application";
+    const isGeneralApplicationIntern = applicationId === "general-application-intern";
 
     const applicationFormRef = useRef<HTMLDivElement>(null);
 
@@ -100,7 +101,7 @@ const Application = () => {
                 <Box className="pl-4 md:pl-8 [&>ul]:mb-4 [&>ul>li]:mb-1.5 md:[&>ul>li]:mb-1 [&>ul>li]:leading-[1.5] md:[&>ul>li]:leading-[1.6]">
                     <SectionHeader>Who We Are</SectionHeader>
                     <Text mb={4} fontSize="sm" color="whiteAlpha.900">
-                        Watoga builds software and sensors to automate and optimize the entirety of the mining operation. Our first step is the drill and blast process, which means understanding what's in the rock and how to blast it efficiently.
+                        Watoga builds software and sensors to automate and optimize the entirety of the mining operation. Our first step is the drill and blast process, which means understanding what&apos;s in the rock and how to blast it efficiently.
                         <br />
                         <br />
                         Everything around us starts as ore in the ground. Valuable ore is rare, but the time constraints of mining and the lack of information about the subsurface causes modern mines to send tons of ore to waste and leave billions of dollars on the table.
@@ -117,7 +118,7 @@ const Application = () => {
 
                     <Divider my={6} />
 
-                    {!isGeneralApplication ? (
+                    {!isGeneralApplication && !isGeneralApplicationIntern ? (
                         <>
                             <SectionHeader>Responsibilities</SectionHeader>
                             <BulletList items={curApp.responsibilities} />
@@ -140,7 +141,7 @@ const Application = () => {
                                         This role will pay <b>{curApp.salary}</b>, plus <b>significant equity</b>, so you have a real stake in Watoga&apos;s success. We are all in this journey together. 
                                     </Text>
                                     <Text mb={4} fontSize="sm" color="whiteAlpha.900">Aside from base compensation, we invest heavily in our team. You&apos;ll have the freedom and resources to experiment and iterate quickly. We&apos;re a high-growth company with no middle management, which translates to fast decision making and the ability for you to own major initiatives from day one.</Text>
-                                    <Text mb={6} fontSize="sm" color="whiteAlpha.900">All meals (breakfast, lunch, dinner) are paid for when you&apos;re at headquarters. You&apos;ll also have a room at our headquartes in Montreal provided, if you wish to stay there - we&apos;ll be booking a penthouse for the office and having the whole team stay there. </Text>
+                                    <Text mb={6} fontSize="sm" color="whiteAlpha.900">All meals (breakfast, lunch, dinner) are paid for when you&apos;re at headquarters. You&apos;ll also have a room at our headquarters in Montreal provided, if you wish to stay there - we&apos;ll be booking a penthouse for the office and having the whole team stay there. </Text>
                                 </>
                             ) : (
                                 <Text mb={4} fontSize="sm" color="whiteAlpha.900">This role pays <b>{curApp.salary}</b> as a contractor. We value expertise and will ensure everyone on our team is compensated fairly for their critical contributions to our ambitious goals.</Text>
@@ -150,6 +151,43 @@ const Application = () => {
 
                             <SectionHeader>Additional Requirements</SectionHeader>
                             <BulletList items={curApp.additionalRequirements} />
+
+                            <Divider my={6} />
+                        </>
+                    ) : isGeneralApplication ? (
+                        <>
+                            <SectionHeader>What We&apos;re Looking For</SectionHeader>
+                            <Text mb={4} fontSize="sm" color="whiteAlpha.900">We&apos;re always interested in meeting exceptional people across various disciplines, including:</Text>
+                            <BulletList items={[
+                                "Software Engineers (Full-stack, Frontend, Backend, ML/AI)",
+                                "Hardware Engineers (Mechanical, Electrical, Controls)",
+                                "Product and Design professionals",
+                                "Operations and Business Development experts",
+                                "Government/Regulatory Affairs professionals",
+                                "Field Operations specialists",
+                            ]} />
+
+                            <SectionHeader>What Makes a Great Durin Team Member</SectionHeader>
+                            <BulletList items={[
+                                "Bias towards action and rapid iteration",
+                                "Strong builder mentality with a track record of shipping products",
+                                "Comfortable working in a fast-paced, dynamic environment",
+                                "Excited about working on hard technical problems with real-world impact",
+                                "Previous startup experience or entrepreneurial mindset",
+                                "Willing to work from our Los Angeles headquarters (El Segundo)",
+                            ]} />
+
+                            <SectionHeader>What We Offer</SectionHeader>
+                            <BulletList items={[
+                                "Opportunity to work on cutting-edge technology in mining automation",
+                                "Competitive compensation with significant equity",
+                                "Healthcare coverage (medical, dental, vision)",
+                                "All meals (breakfast, lunch, dinner) covered",
+                                "Help with housing close to the office",
+                                "Field visits to mining sites all around the world",
+                                "Direct impact on company direction and growth",
+                                "Support for future entrepreneurial endeavors",
+                            ]} />
 
                             <Divider my={6} />
                         </>

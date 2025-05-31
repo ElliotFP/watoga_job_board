@@ -98,7 +98,7 @@
         "salary": "$100,000–$150,000"
     },
     {
-        "applicationId": "senior-electrical-engineer",
+        "applicationId": "senior-electrical-engineer",  
         "title": "Senior Electrical Engineer",
         "location": "Montreal, CA",
         "jobType": "Full-Time",
@@ -186,7 +186,7 @@
             "Must be willing to work from our headquarters in Montreal",
             "Must be willing to work extended hours and weekends as needed"
         ],
-        "salary": "$150,000–$180,000"
+        "salary": "$100,000–$150,000"
     },
     {
         "applicationId": "embedded-systems-engineer",
@@ -232,7 +232,7 @@
             "Must be willing to work from our headquarters in Montreal",
             "Must be willing to work extended hours and weekends as needed"
         ],
-        "salary": "$150,000–$180,000"
+        "salary": "$100,000–$150,000"
     },
     {
         "applicationId": "mine-deployed-engineer",
@@ -281,12 +281,26 @@
         "salary": "$100,000–$150,000"
     },
     {
+        "applicationId": "general-application-intern",
+        "title": "General Application - Intern",
+        "location": "Montreal, CA",
+        "descriptionHeader": "General Application - Intern",
+        "description": "We are always on the lookout for talented individuals who want to join our team. If you don't see a role that fits you, apply here and let us know how you can help. This role distinguishes itself from the general application by being specifically for interns, so if you're interested in what we're building, have a lot of grit and are willing to work hard, but still more junior, this is the role for you.",
+        "note": "You don't need mining or drilling experience to excel at this role.",
+        "responsibilities": [],
+        "competencies": [],
+        "inThisRoleYouWill": [],
+        "thisMightBeAGoodFitIfYou": [],
+        "additionalRequirements": [],
+        "salary": null
+    },
+    {
         "applicationId": "general-application",
         "title": "General Application",
         "location": "Montreal, CA",
         "descriptionHeader": "General Application",
         "description": "We are always on the lookout for talented individuals who want to join our team. If you don't see a role that fits you, apply here and let us know how you can help.",
-        "note": "You don't need mining or drilling experience to excel at Watoga.",
+        "note": "You don't need mining or drilling experience to excel at this role.",
         "responsibilities": [],
         "competencies": [],
         "inThisRoleYouWill": [],

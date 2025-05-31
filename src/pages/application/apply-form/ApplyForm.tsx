@@ -127,17 +127,25 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
 
     const handleSubmit = async (values: ApplicationFields) => {
         setIsSubmitting(true);
+        console.log('Starting submission process with values:', { 
+            ...values,
+            resume: values.resume ? `${values.resume.name} (${values.resume.size} bytes)` : null 
+        });
+        
         try {
             const now = new Date();
             const formattedDate = `${now.getFullYear()}-${(now.getMonth() + 1).toString().padStart(2, '0')}-${now.getDate().toString().padStart(2, '0')}_${now.getHours().toString().padStart(2, '0')}-${now.getMinutes().toString().padStart(2, '0')}`;
-
+            
+            console.log('Attempting to upload resume...');
             const { data: uploadData, error: uploadError } = await supabase.storage
-                .from('job_resumes')
+                .from('job-resumes')
                 .upload(`${values.email}/${values.applicationId}/${formattedDate}_${values.resume?.name}`, values.resume as File);
 
             if (uploadError) {
+                console.error('Resume upload failed:', uploadError);
                 throw uploadError;
             }
+            console.log('Resume uploaded successfully:', uploadData);
 
             const applicationData = {
                 application_id: values.applicationId,
@@ -155,22 +163,35 @@ const ApplyForm = ({ applicationId, isContract }: { applicationId: string, isCon
                 additional_info: values.additionalInformation,
                 resume_url: uploadData.path,
             };
-
+            
+            console.log('Attempting to insert application data:', applicationData);
             const { error: insertError } = await supabase
                 .from('job_applicants')
                 .insert([applicationData]);
 
             if (insertError) {
+                console.error('Application insert failed:', insertError);
                 throw insertError;
             }
+            console.log('Application submitted successfully!');
 
             router.push('/submitted');
             toast.success('Application submitted successfully!');
         } catch (error) {
-            if (error instanceof Error && error.message.includes('resource already exists')) {
-                toast.error('You have already submitted an application for this job.');
+            console.error('Submission error:', error);
+            if (error instanceof Error) {
+                console.error('Error details:', {
+                    message: error.message,
+                    stack: error.stack
+                });
+                if (error.message.includes('resource already exists')) {
+                    toast.error('You have already submitted an application for this job.');
+                } else {
+                    toast.error('Something went wrong. ' + error.message);
+                }
             } else {
-                toast.error('Something went wrong. ' + (error instanceof Error ? error.message : 'Unknown error'));
+                console.error('Unknown error type:', error);
+                toast.error('Something went wrong. Unknown error');
             }
         }
         setIsSubmitting(false);
