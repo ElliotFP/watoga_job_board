@@ -1,7 +1,7 @@
 'use client';
 
-import { Box, Text, Heading, Button, Center, VStack } from '@chakra-ui/react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { Box, Text, Heading, Center, VStack } from '@chakra-ui/react';
+import { useSearchParams } from 'next/navigation';
 import Navbar from '../../navbar/Navbar';
 import Footer from '../../footer/Footer';
 import { Suspense } from 'react';
@@ -45,8 +45,6 @@ const SubmittedContent = () => {
 };
 
 const Submitted = () => {
-    const router = useRouter();
-
     return (
         <Box minH="100vh" display="flex" flexDirection="column">
             <Navbar />
