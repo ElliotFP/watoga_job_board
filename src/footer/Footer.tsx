@@ -28,7 +28,7 @@ const Footer = () => {
                 alt="Logo"
                 height={12}
                 width={32}
-                onClick={() => window.open('https://www.watoga.com', '_blank', 'noopener,noreferrer')}
+                onClick={() => window.open('https://www.watoga.tech', '_blank', 'noopener,noreferrer')}
                 cursor="pointer"
             />
             <Text

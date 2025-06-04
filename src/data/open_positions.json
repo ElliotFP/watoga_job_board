@@ -1,31 +1,32 @@
 [
     {
-        "applicationId": "machine-learning-engineer-geology",
-        "title": "Machine Learning Engineer - Geology",
+        "applicationId": "machine-learning-engineer",
+        "title": "Machine Learning Engineer",
         "location": "Montreal, CA",
         "jobType": "Full-Time",
-        "descriptionHeader": "Building predictive subsurface modelling",
-        "description": "As a Machine Learning engineer working on  geology modelling at Watoga you will lead the architecture and development of machine learning models used to predict the properties of the subsurface from the various sources of data collected during the operation. Your responsibilities include model architecture, benchmarking, tuning, geological data interpretation, data pipeline creation and data-driven automation.",
+        "descriptionHeader": "Building predictive modelling and automating / optimizing decision making",
+        "description": "As a Machine Learning engineer working at Watoga you will lead the architecture and development of machine learning models used to predict the properties of the subsurface from the various sources of data collected during the operation and to automate / optimize decision making in the field based on new and historical data. Your responsibilities include model architecture, benchmarking, tuning, geological data interpretation, data pipeline creation and data-driven automation.",
         "note": "You don't need mining or drilling experience to excel in this role.",
         "responsibilities": [
             "Design and deploy backend/frontend systems that handle real-time field data, geological data, and sensor data",
             "Architect, benchmark, tune, and deploy machine learning models to predict the properties of the subsurface based on historical and operational data",
             "Build pre-processing pipelines to turn raw data into structured inputs for machine learning models",
-            "Implement CI/CD, automated monitoring, and self-healing infrastructure to ensure high availability and reduce manual intervention",
             "Optimize microservices and data pipelines to handle large-scale, rapidly growing datasets from operating mines",
             "Manage core infrastructure (databases, storage, monitoring, logging) both on-premises at mine sites and in public cloud environments",
             "Drive edge-computing strategies for low-latency analytics, machine learning, and autonomous decision-making on the mines themselves",
+            "Benchmark performance of machine learning models versus conventional methods",
             "Collaborate with engineers and field teams to deliver end-to-end solutions from concept to field validation and hand-off"
         ],
         "competencies": [
             "Proven success designing and scaling enterprise software in cloud-based, distributed, and microservice environments",
-            "Skilled in multiple programming languages (e.g., Python, TypeScript, Golang, Rust) and popular machine learning libraries (e.g. pyTorch, Keras, TensorFlow, etc.) , with strong architectural principles",
+            "Skilled in multiple programming languages (Python, TypeScript, Golang, Rust, C++, C, etc.) and popular machine learning libraries (e.g. pyTorch, Keras, TensorFlow, etc.) , with strong architectural principles",
             "Experience with SQL/NoSQL databases, real-time analytics, and data pipelines handling large, streaming telemetry",
             "Deep knowledge of cloud platforms (AWS, Azure, GCP), edge computing strategies, and event-driven architectures",
             "Demonstrated ability to diagnose bottlenecks, optimize performance, and deliver reliable, high-traffic services in demanding or remote settings",
             "Solid security mindset, including expertise in authentication, encryption, and compliance (e.g., SOC2, ISO 27001)",
             "Industrial or hardware-adjacent experience (real-time data acquisition, embedded systems, rugged environments) is a plus",
-            "Experience working with large datasets and modelling complex spatial problems with machine learning is a big plus"
+            "Experience working with large datasets and modelling complex spatial problems with machine learning is a big plus",
+            "Mathematics, Physics, or Geoscience background is a big plus"
         ],
         "inThisRoleYouWill": [
             "Own a product vertical with the opportunity to build a team around yourself over time",
@@ -40,55 +41,8 @@
             "Have extensive experience shipping modern, full-stack software",
             "Are product-minded and user-driven",
             "Have a strong first-principled way of thinking",
-            "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles"
-        ],
-        "additionalRequirements": [
-            "Must be willing to work from our headquarters in Montreal",
-            "Must be willing to work extended hours and weekends as needed"
-        ],
-        "salary": "$100,000–$150,000"
-    },
-    {
-        "applicationId": "machine-learning-engineer-planning",
-        "title": "Machine Learning Engineer - Plan Design",
-        "location": "Montreal, CA",
-        "jobType": "Full-Time",
-        "descriptionHeader": "Automating blast plan design",
-        "description": "As a Machine Learning engineer at Watoga you will lead the architecture and development of end-to-end software systems that run large networks of next-generation industrial machinery. Your responsibilities include application deployments, geological data interpretation, and data-driven automation.",
-        "note": "You don't need mining or drilling experience to excel in this role.",
-        "responsibilities": [
-            "Design and deploy backend/frontend systems that handle real-time sensor data, remote control, and third-party integrations",
-            "Implement CI/CD, automated monitoring, and self-healing infrastructure to ensure high availability and reduce manual intervention",
-            "Develop security frameworks and data protection policies to meet regulatory standards and protect sensitive information",
-            "Optimize microservices and data pipelines to handle large-scale, rapidly growing datasets from operating mines",
-            "Manage core infrastructure (databases, storage, monitoring, logging) both on-premises at mine sites and in public cloud environments",
-            "Drive edge-computing strategies for low-latency analytics, machine learning, and autonomous decision-making on the mines themselves",
-            "Collaborate with engineers and field teams to deliver end-to-end solutions from concept to field validation and hand-off"
-        ],
-        "competencies": [
-            "Proven success designing and scaling enterprise software in cloud-based, distributed, and microservice environments",
-            "Skilled in multiple programming languages (e.g., Python, TypeScript, Golang, Rust) and popular machine learning libraries (e.g. pyTorch, Keras, TensorFlow, etc.) , with strong architectural principles",
-            "Experience with SQL/NoSQL databases, real-time analytics, and data pipelines handling large, streaming telemetry",
-            "Deep knowledge of cloud platforms (AWS, Azure, GCP), edge computing strategies, and event-driven architectures",
-            "Demonstrated ability to diagnose bottlenecks, optimize performance, and deliver reliable, high-traffic services in demanding or remote settings",
-            "Solid security mindset, including expertise in authentication, encryption, and compliance (e.g., SOC2, ISO 27001)",
-            "Industrial or hardware-adjacent experience (real-time data acquisition, embedded systems, rugged environments) is a plus",
-            "Experience working with large datasets and modelling complex spatial problems with machine learning is a big plus",
-            "Strong mathematical background is a plus"
-        ],
-        "inThisRoleYouWill": [
-            "Own a product vertical with the opportunity to build a team around yourself over time",
-            "Work directly with our internal and external customers to drive our roadmap",
-            "Get to build alongside the best engineers and mining operators in the world",
-            "Be given autonomy and virtually unlimited room to grow",
-            "Travel all over the world"
-        ],
-        "thisMightBeAGoodFitIfYou": [
-            "Have a bias to action, take pride in your work, and care more about getting to the right solution than being right",
-            "Have led critical projects or initiatives",
-            "Have extensive experience shipping modern, full-stack software",
-            "Are product-minded and user-driven",
-            "Have a strong first-principled way of thinking", 
+            "Are a previous or future founder — if you leave Watoga to start a company, we'll do everything to support you, including investing in you and introducing you to Watoga's investors",
+
             "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles"
         ],
         "additionalRequirements": [
@@ -103,10 +57,11 @@
         "location": "Montreal, CA",
         "jobType": "Full-Time",
         "descriptionHeader": "Building the Sensor platform",
-        "description": "As a Senior Electrical Engineer at Watoga, you will design and implement the electrical systems that power and control our advanced drilling rigs. Responsibilities range from control panel design and harness routing to selecting power distribution components that operate reliably in rugged conditions.",
+        "description": "As a Senior Electrical Engineer at Watoga, you will design and implement sensors and systems to survey and gather data on production blast benches. You will also be responsible for the design and implementation of the sensors and systems that power and control our sensor platform.",
         "note": "You don't need mining or drilling experience to excel in this role.",
         "responsibilities": [
-            "Design electrical layouts and schematics for drilling equipment, including power distribution, controls, and instrumentation",
+            "Design electrical layouts and schematics for sensor platforms, including power distribution, controls, and instrumentation",
+            "Ensure proper data collection and calibration from sensors and systems",
             "Specify and source electrical components (switchgear, VFDs, PLCs, sensors, cables) aligned with rig requirements",
             "Develop wiring diagrams, harness routings, and cabinet layouts, ensuring maintainability and compliance",
             "Coordinate with controls/software teams to integrate I/O points, safety circuits, and communication networks",
@@ -134,7 +89,9 @@
             "Have extensive experience shipping modern, full-stack hardware",
             "Are product-minded and user-driven",
             "Have a strong first-principled way of thinking",
-            "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles"
+            "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles",
+            "Are a previous or future founder — if you leave Watoga to start a company, we'll do everything to support you, including investing in you and introducing you to Watoga's investors",
+            "Can work from our Montreal headquarters"
         ],
         "additionalRequirements": [
             "Must be willing to work from our headquarters in Montreal",
@@ -148,19 +105,20 @@
         "location": "Montreal, CA",
         "jobType": "Full-Time",
         "descriptionHeader": "Building pipelines for operational data",
-        "description": "As Principal Data Scientist at Watoga, you will lead the development of data systems that turn raw sensor, mineralogical, geochemical, and drilling-related inputs into reliable, decision-ready outputs. You will define how data is captured, structured, quality controlled, and surfaced in the product, anchored in the highest standards of accuracy, consistency, and trust across the exploration workflow.",
-        "note": "Experience in geology or drilling is highly desired.",
+        "description": "As Principal Data Scientist at Watoga, you will lead the development of data systems that turn raw sensor, mineralogical, geochemical, and drilling-related inputs into reliable, decision-ready outputs. You will define how data is captured, structured, quality controlled, and surfaced in the product, anchored in the highest standards of accuracy, consistency, and trust across the operational workflow of the mine.",
+        "note": "Experience in geology, drilling, or mining is highly desired, but not required.",
         "responsibilities": [
-            "Architect core data systems from the ground up to support sensor-driven mineral exploration products",
-            "Define and lead acquisition strategies across sensors, geochemical inputs, and rig telemetry with scale, accuracy, and reliability",
+            "Architect core data systems from the ground up to support sensor-driven mineral extractions products",
+            "Build pipelines to turn raw data in various different formats and from different sources into structured inputs for machine learning models",
             "Build and maintain edge-to-cloud pipelines that deliver structured, decision-ready data in real time",
             "Develop and deploy advanced machine learning models that enhance subsurface interpretation and operational decision-making",
-            "Establish and enforce rigorous quality control and assurance protocols that meet or exceed industry standards for data integrity",
+            "Build models for cross-checking between various sensor inputs in our multi-sensor platformto get a more accurate picture of the subsurface",
+            "Establish and enforce rigorous quality control and assurance protocols that meet or exceed industry standards for data integrity and consistency",
             "Work cross-functionally with geologists, engineers, and product teams to ensure data infrastructure supports core platform functionality and end-user needs",
             "Drive the long-term data architecture and strategy, ensuring all systems are robust, auditable, and built for scalability and trust"
         ],
         "competencies": [
-            "Expert in Python, SQL, and machine learning frameworks (e.g. TensorFlow, PyTorch, scikit-learn)",
+            "Skilled in multiple programming languages (Python, TypeScript, Golang, Rust, C++, C, etc.) and popular machine learning libraries (e.g. pyTorch, Keras, TensorFlow, etc.) , with strong architectural principles",
             "Proven track record building and scaling production-grade data systems in technically rigorous settings",
             "Extensive experience with time-series, sensor, and unstructured data across edge and cloud pipelines",
             "Strong background in QA/QC implementation, with systems built to meet or exceed industry standards",
@@ -180,6 +138,7 @@
             "Have extensive experience shipping modern, full-stack software",
             "Are product-minded and user-driven",
             "Have a strong first-principled way of thinking",
+            "Are a previous or future founder — if you leave Watoga to start a company, we'll do everything to support you, including investing in you and introducing you to Watoga's investors",
             "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles"
         ],
         "additionalRequirements": [
@@ -193,12 +152,12 @@
         "title": "Embedded Systems Engineer",
         "location": "Montreal, CA",
         "jobType": "Full-Time",
-        "descriptionHeader": "Architecting the Sensor platform",
-        "description": "We are hiring an embedded systems engineer to develop low-level firmware for sensors, microcontrollers, and communication systems on our autonomous drilling rigs. You’ll rapidly prototype, iterate, and collaborate with the rest of our team, testing in the field daily or weekly.",
+        "descriptionHeader": "Architecting the Sensor platform's firmware",
+        "description": "We are hiring an embedded systems engineer to develop low-level firmware for sensors, microcontrollers, and communication systems on our sensor platform. You’ll rapidly prototype, iterate, and collaborate with the rest of our team, testing in the field daily or weekly.",
         "isMiningExperienceRequired": false,
         "responsibilities": [
             "Develop and optimize firmware for embedded microcontrollers and industrial-grade equipment",
-            "Integrate and calibrate diverse sensors (pressure, vibration, temperature) for real-time data acquisition and control loops",
+            "Integrate and calibrate diverse sensors for real-time data acquisition and control loops",
             "Ensure reliable, timing-critical firmware operation in rugged environments, supporting closed-loop automation",
             "Connect embedded devices to networks (e.g., Starlink) for remote data capture",
             "Collaborate with mechanical and electrical engineers to align hardware and software integrations from PCB to actuator",
@@ -225,52 +184,7 @@
             "Have extensive experience shipping modern, full-stack firmware",
             "Are product-minded and user-driven",
             "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles",
-            "Are a previous or future founder — if you leave Watoga to start a company, we'll do everything to support you, including investing in you and introducing you to Watoga's investors",
-            "Can work from our Montreal headquarters"
-        ],
-        "additionalRequirements": [
-            "Must be willing to work from our headquarters in Montreal",
-            "Must be willing to work extended hours and weekends as needed"
-        ],
-        "salary": "$100,000–$150,000"
-    },
-    {
-        "applicationId": "mine-deployed-engineer",
-        "title": "Mine Deployed Engineer",
-        "location": "Montreal, CA",
-        "jobType": "Full-Time",
-        "descriptionHeader": "Setting up the software in the field / working with clients",
-        "description": "We are hiring an embedded systems engineer to develop low-level firmware for sensors, microcontrollers, and communication systems on our autonomous drilling rigs. You’ll rapidly prototype, iterate, and collaborate with the rest of our team, testing in the field daily or weekly.",
-        "isMiningExperienceRequired": false,
-        "responsibilities": [
-            "Develop and optimize firmware for embedded microcontrollers and industrial-grade equipment",
-            "Integrate and calibrate diverse sensors (pressure, vibration, temperature) for real-time data acquisition and control loops",
-            "Ensure reliable, timing-critical firmware operation in rugged environments, supporting closed-loop automation",
-            "Connect embedded devices to networks (e.g., Starlink) for remote data capture",
-            "Collaborate with mechanical and electrical engineers to align hardware and software integrations from PCB to actuator",
-            "Iterate quickly on firmware and sensor configurations in both lab and field environments"
-        ],
-        "competencies": [
-            "Experience in embedded firmware development, ideally in industrial or heavy machinery contexts",
-            "Strong understanding of real-time operating systems, control algorithms (e.g., PID), and sensor fusion",
-            "Skilled at sensor integration, signal conditioning, and data processing for actionable insights",
-            "Familiarity with industrial communication protocols (CAN bus, Modbus) and wireless solutions",
-            "Proven ability to maintain robustness in challenging conditions (dust, vibration, extreme temperatures)",
-            "Comfortable in a fast-paced, interdisciplinary team environment, rapidly prototyping, testing, and refining code for field-ready performance"
-        ],
-        "inThisRoleYouWill": [
-            "Own a product vertical with the opportunity to build a team around yourself over time",
-            "Work directly with our internal and external customers to drive our roadmap",
-            "Get to build alongside the best engineers and mining operators in the world",
-            "Be given autonomy and virtually unlimited room to grow",
-            "Travel all over the world"
-        ],
-        "thisMightBeAGoodFitIfYou": [
-            "Have a bias to action, take pride in your work, and care more about getting to the right solution than being right",
-            "Have led critical projects or initiatives",
-            "Have extensive experience shipping modern, full-stack firmware",
-            "Are product-minded and user-driven",
-            "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles",
+            "Have a strong first-principled way of thinking",
             "Are a previous or future founder — if you leave Watoga to start a company, we'll do everything to support you, including investing in you and introducing you to Watoga's investors",
             "Can work from our Montreal headquarters"
         ],

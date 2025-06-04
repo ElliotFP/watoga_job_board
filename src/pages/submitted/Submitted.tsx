@@ -12,10 +12,10 @@ const SubmittedContent = () => {
 
     return (
         <VStack px={8}>
-            <Heading as="h1" size={["2xl", "3xl"]} opacity={0.8} textAlign="center" fontWeight='bold' mb='26px' fontSize={["24px", "34px"]}>
+            <Heading as="h1" size={["2xl", "3xl"]} opacity={0.8} textAlign="center" fontFamily={'lekton'} fontWeight='bold' mb='26px' textColor={'white'} fontSize={["24px", "34px"]}>
                 Application Submitted
             </Heading>
-            <Box
+            {/* <Box
                 mb={4}
                 maxW={["400px", '500px', '600px']}
                 w="full"
@@ -36,8 +36,8 @@ const SubmittedContent = () => {
                         borderRadius: 'inherit',
                     }}
                 />
-            </Box>
-            <Text opacity={0.65} textAlign="center" maxW="650px" fontSize={["14px", "16px"]} mb={4}>
+            </Box> */}
+            <Text opacity={0.65} textAlign="center" maxW="650px" fontSize={["14px", "16px"]} textColor={'white'} mb={4}>
                 Thank you for your application{name ? `, ${name}` : ''}. We will review it and get back to you soon.
             </Text>
         </VStack>
@@ -48,13 +48,13 @@ const Submitted = () => {
     return (
         <Box minH="100vh" display="flex" flexDirection="column">
             <Navbar />
-            <Center flex="1">
+            <Center flex="1" bg="black" >
                 <Suspense fallback={
                     <VStack px={8}>
-                        <Heading as="h1" size={["2xl", "3xl"]} opacity={0.8} textAlign="center" fontWeight='bold' mb='26px' fontSize={["24px", "34px"]}>
+                        <Heading as="h1" size={["2xl", "3xl"]} opacity={0.8} textAlign="center" textColor="white  " fontWeight='bold' mb='26px' fontSize={["24px", "34px"]}>
                             Application Submitted
                         </Heading>
-                        <Text opacity={0.65} textAlign="center" maxW="650px" fontSize={["14px", "16px"]} mb={4}>
+                        <Text opacity={0.65} textAlign="center" maxW="650px" fontSize={["14px", "16px"]} mb={4} textColor="white">
                             Thank you for your application. We will review it and get back to you soon.
                         </Text>
                     </VStack>
