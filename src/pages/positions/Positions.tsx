@@ -1,8 +1,8 @@
 'use client';
 
 import OPEN_POSITIONS from '../../data/open_positions.json';
-import { Box, Text, Heading,Badge, Divider } from '@chakra-ui/react';
-import { RxExternalLink } from "react-icons/rx";
+import { Box, Text, Heading,Badge} from '@chakra-ui/react';
+// import { RxExternalLink } from "react-icons/rx";
 import { useRouter } from 'next/navigation';
 import Navbar from '../../navbar/Navbar';
 import Footer from '../../footer/Footer';
