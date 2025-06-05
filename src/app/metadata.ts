@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Durin - Careers",
-  description: "Join Durin to build the future of mining",
+  title: "Watoga - Apply",
+  description: "Join Watoga to build the mines of tomorrow",
 }; 

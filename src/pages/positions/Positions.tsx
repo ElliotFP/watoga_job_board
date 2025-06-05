@@ -125,7 +125,7 @@ const Positions = () => {
                         </Box>
                     ))}
                 </Box>
-
+{/* 
                 <Divider my={[8, 10]} />
 
                 <Box
@@ -207,7 +207,7 @@ const Positions = () => {
                             <RxExternalLink size={20} />
                         </Text>
                     </Box>
-                </Box>
+                </Box> */}
             </Box>
 
             <Footer />
