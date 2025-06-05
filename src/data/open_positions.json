@@ -195,6 +195,58 @@
         "salary": "$100,000–$150,000"
     },
     {
+        "applicationId": "mine-deployed-engineer",
+        "title": "Mine Deployed Engineer",
+        "location": "Montreal, CA",
+        "jobType": "Full-Time",
+        "descriptionHeader": "Setting up the software in the field / working with clients",
+        "description": "We are hiring a mine deployed engineer to set up and operate our software and sensors in the field and support the mine in using them. You’ll rapidly prototype, iterate, and collaborate with the rest of our team, testing in the field daily or weekly.",
+        "isMiningExperienceRequired": false,
+        "responsibilities": [
+            "Act as the primary engineering liaison between the mine site and HQ engineering teams",
+            "Deploy, operate, and maintain advanced drilling, blasting, or sensing technology on-site",
+            "Support data collection, sensor calibration, and real-time monitoring of mine operations",
+            "Work with mine staff to troubleshoot technical issues and optimize system performance",
+            "Train site personnel in the use of new technologies or systems",
+            "Provide feedback to design and software teams to improve product functionality and usability",
+            "Document field activities, operational performance, and incident reports with clarity and accuracy",
+            "Support the operation remotely when needed"
+        ],
+        "competencies": [
+            "Strong technical problem-solving in high-pressure, real-world mining environments",
+            "Excellent communication and interpersonal skills for working with cross-disciplinary teams",
+            "Practical knowledge of mine operations, especially blasting, drilling, or geotech monitoring",
+            "Ability to work independently and manage priorities in remote and dynamic field settings",
+            "Familiarity with mine safety protocols and hazard mitigation strategies",
+            "Adaptability to evolving field conditions and changing project requirements"
+        ],
+        "inThisRoleYouWill": [
+            "Be embedded at the mine site on a rotational or full-time basis",
+            "Work hands-on with cutting-edge mining technologies and data systems",
+            "Influence real-world mining outcomes through technology deployment and process integration",
+            "Serve as a critical voice for field operations during product development cycles",
+            "Deliver reliable and actionable data back to the central engineering or R&D teams"
+        ],
+        "thisMightBeAGoodFitIfYou": [
+            "Have a bias to action, take pride in your work, and care more about getting to the right solution than being right",
+            "Have led critical projects or initiatives",
+            "Have extensive experience shipping modern, full-stack firmware",
+            "Are product-minded and user-driven",
+            "Have a strong first-principled way of thinking",
+            "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles",
+            "Are a previous or future founder — if you leave Watoga to start a company, we'll do everything to support you, including investing in you and introducing you to Watoga's investors",
+            "Can work from our Montreal headquarters"
+        ],
+        "additionalRequirements": [
+            "Bachelor’s degree in mining engineering, Geological Engineering, or related field (Master’s a plus)",
+            "Prior field experience in a mining is a must",
+            "Ability to work underground or in open-pit environments as required", 
+            "Must be legally eligible to work in the country of deployment",
+            "Willingness to work on a rotational schedule (e.g.,14/14, 7/7) depending on site conditions"
+        ],
+        "salary": "$100,000–$150,000"
+    },
+    {
         "applicationId": "general-application-intern",
         "title": "General Application - Intern",
         "location": "Montreal, CA",
@@ -222,4 +274,5 @@
         "additionalRequirements": [],
         "salary": null
     }
+    
 ]
