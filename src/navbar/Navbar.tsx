@@ -74,7 +74,7 @@ const Navbar = ({
                     textTransform="uppercase"
                     color="whiteAlpha.900"
                     cursor="pointer"
-                    onClick={() => window.open('https://durin.com', '_blank')}
+                    onClick={() => window.open('https://watoga.tech', '_blank')}
                     transition="color 0.3s ease"
                     _hover={{ color: "gray.300" }}
                     _active={{ color: "gray.500" }}

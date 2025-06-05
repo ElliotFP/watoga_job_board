@@ -172,7 +172,7 @@ const Application = () => {
                                 "Field Operations specialists",
                             ]} />
 
-                            <SectionHeader>What Makes a Great Durin Team Member</SectionHeader>
+                            <SectionHeader>What Makes a Great Watoga Team Member</SectionHeader>
                             <BulletList items={[
                                 "Bias towards action and rapid iteration",
                                 "Strong builder mentality with a track record of shipping products",
