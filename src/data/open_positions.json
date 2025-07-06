@@ -1,30 +1,32 @@
 [
     {
-        "applicationId": "machine-learning-engineer",
-        "title": "Machine Learning Engineer",
+        "applicationId": "senior-software-engineer-physics-simulation",
+        "title": "Senior Software Engineer (physics simulation)",
         "location": "Montreal, CA",
         "jobType": "Full-Time",
-        "descriptionHeader": "Building predictive modelling and automating / optimizing decision making",
-        "description": "As a Machine Learning engineer working at Watoga you will lead the architecture and development of machine learning models used to predict the properties of the subsurface from the various sources of data collected during the operation and to automate / optimize decision making in the field based on new and historical data. Your responsibilities include model architecture, benchmarking, tuning, geological data interpretation, data pipeline creation and data-driven automation.",
-        "note": "You don't need mining or drilling experience to excel in this role.",
+        "descriptionHeader": "Building physics simulation models of blast movement",
+        "description": "You will lead the architecture and development of physics simulation models used to predict various aspects of blast movement, including the trajectory of the blast, the resulting fragmentation and the vibration waves propagating through the ground. You will also be respons=ible for the optimization of the simulation models.",
+        "note": "You don't need mining experience to excel in this role.",
         "responsibilities": [
-            "Design and deploy backend/frontend systems that handle real-time field data, geological data, and sensor data",
-            "Architect, benchmark, tune, and deploy machine learning models to predict the properties of the subsurface based on historical and operational data",
-            "Build pre-processing pipelines to turn raw data into structured inputs for machine learning models",
-            "Optimize microservices and data pipelines to handle large-scale, rapidly growing datasets from operating mines",
+            "Design and deploy backend/frontend systems that handle real-time blast data, geological data, and sensor measurements",
+            "Architect, benchmark, tune, and deploy physics simulation models to predict blast movement, fragmentation, and vibration propagation",
+            "Build pre-processing pipelines to turn raw field data into structured inputs for physics simulations",
+            "Optimize simulation engines and data pipelines to handle large-scale, rapidly growing datasets from operating mines",
             "Manage core infrastructure (databases, storage, monitoring, logging) both on-premises at mine sites and in public cloud environments",
-            "Drive edge-computing strategies for low-latency analytics, machine learning, and autonomous decision-making on the mines themselves",
-            "Benchmark performance of machine learning models versus conventional methods",
-            "Collaborate with engineers and field teams to deliver end-to-end solutions from concept to field validation and hand-off"
+            "Drive edge-computing strategies for low-latency physics simulations and real-time blast analysis on the mines themselves",
+            "Benchmark performance of physics simulation models versus conventional blast prediction methods",
+            "Collaborate with engineers and field teams to deliver end-to-end solutions from concept to field validation and hand-off", 
+            "After the deterministic simulation models are validated, you will be responsible for optimizing the models, most likely by using machine learning"
         ],
         "competencies": [
-            "Proven success designing and scaling enterprise software in cloud-based, distributed, and microservice environments",
+            "Proven success designing and building models with high fidelity to real world processes",
+            "Computer graphics experience is a big plus",
             "Skilled in multiple programming languages (Python, TypeScript, Golang, Rust, C++, C, etc.) and popular machine learning libraries (e.g. pyTorch, Keras, TensorFlow, etc.) , with strong architectural principles",
             "Experience with SQL/NoSQL databases, real-time analytics, and data pipelines handling large, streaming telemetry",
             "Deep knowledge of cloud platforms (AWS, Azure, GCP), edge computing strategies, and event-driven architectures",
             "Demonstrated ability to diagnose bottlenecks, optimize performance, and deliver reliable, high-traffic services in demanding or remote settings",
             "Solid security mindset, including expertise in authentication, encryption, and compliance (e.g., SOC2, ISO 27001)",
-            "Industrial or hardware-adjacent experience (real-time data acquisition, embedded systems, rugged environments) is a plus",
+            "CUDA / GPU programming experience is a big plus",
             "Experience working with large datasets and modelling complex spatial problems with machine learning is a big plus",
             "Mathematics, Physics, or Geoscience background is a big plus"
         ],
@@ -40,9 +42,8 @@
             "Have led critical projects or initiatives",
             "Have extensive experience shipping modern, full-stack software",
             "Are product-minded and user-driven",
-            "Have a strong first-principled way of thinking",
+            "Have a strong first-principled way of thinking, and a strong interest in physics and mathematics",
             "Are a previous or future founder — if you leave Watoga to start a company, we'll do everything to support you, including investing in you and introducing you to Watoga's investors",
-
             "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles"
         ],
         "additionalRequirements": [
@@ -92,54 +93,6 @@
             "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles",
             "Are a previous or future founder — if you leave Watoga to start a company, we'll do everything to support you, including investing in you and introducing you to Watoga's investors",
             "Can work from our Montreal headquarters"
-        ],
-        "additionalRequirements": [
-            "Must be willing to work from our headquarters in Montreal",
-            "Must be willing to work extended hours and weekends as needed"
-        ],
-        "salary": "$100,000–$150,000"
-    },
-    {
-        "applicationId": "principal-data-scientist",
-        "title": "Principal Data Scientist",
-        "location": "Montreal, CA",
-        "jobType": "Full-Time",
-        "descriptionHeader": "Building pipelines for operational data",
-        "description": "As Principal Data Scientist at Watoga, you will lead the development of data systems that turn raw sensor, mineralogical, geochemical, and drilling-related inputs into reliable, decision-ready outputs. You will define how data is captured, structured, quality controlled, and surfaced in the product, anchored in the highest standards of accuracy, consistency, and trust across the operational workflow of the mine.",
-        "note": "Experience in geology, drilling, or mining is highly desired, but not required.",
-        "responsibilities": [
-            "Architect core data systems from the ground up to support sensor-driven mineral extractions products",
-            "Build pipelines to turn raw data in various different formats and from different sources into structured inputs for machine learning models",
-            "Build and maintain edge-to-cloud pipelines that deliver structured, decision-ready data in real time",
-            "Develop and deploy advanced machine learning models that enhance subsurface interpretation and operational decision-making",
-            "Build models for cross-checking between various sensor inputs in our multi-sensor platformto get a more accurate picture of the subsurface",
-            "Establish and enforce rigorous quality control and assurance protocols that meet or exceed industry standards for data integrity and consistency",
-            "Work cross-functionally with geologists, engineers, and product teams to ensure data infrastructure supports core platform functionality and end-user needs",
-            "Drive the long-term data architecture and strategy, ensuring all systems are robust, auditable, and built for scalability and trust"
-        ],
-        "competencies": [
-            "Skilled in multiple programming languages (Python, TypeScript, Golang, Rust, C++, C, etc.) and popular machine learning libraries (e.g. pyTorch, Keras, TensorFlow, etc.) , with strong architectural principles",
-            "Proven track record building and scaling production-grade data systems in technically rigorous settings",
-            "Extensive experience with time-series, sensor, and unstructured data across edge and cloud pipelines",
-            "Strong background in QA/QC implementation, with systems built to meet or exceed industry standards",
-            "Skilled communicator with the ability to align data architecture across engineering, geoscience, and product teams",
-            "Background in geology, geoscience, or related fields is strongly preferred"
-        ],
-        "inThisRoleYouWill": [
-            "Own a product vertical with the opportunity to build a team around yourself over time",
-            "Work directly with our internal and external customers to drive our roadmap",
-            "Get to build alongside the best engineers and mining operators in the world",
-            "Be given autonomy and virtually unlimited room to grow",
-            "Travel all over the world"
-        ],
-        "thisMightBeAGoodFitIfYou": [
-            "Have a bias to action, take pride in your work, and care more about getting to the right solution than being right",
-            "Have led critical projects or initiatives",
-            "Have extensive experience shipping modern, full-stack software",
-            "Are product-minded and user-driven",
-            "Have a strong first-principled way of thinking",
-            "Are a previous or future founder — if you leave Watoga to start a company, we'll do everything to support you, including investing in you and introducing you to Watoga's investors",
-            "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles"
         ],
         "additionalRequirements": [
             "Must be willing to work from our headquarters in Montreal",
@@ -243,6 +196,60 @@
             "Ability to work underground or in open-pit environments as required", 
             "Must be legally eligible to work in the country of deployment",
             "Willingness to work on a rotational schedule (e.g.,14/14, 7/7) depending on site conditions"
+        ],
+        "salary": "$100,000–$150,000"
+    },
+    {
+        "applicationId": "machine-learning-engineer-intern",
+        "title": "Machine Learning Engineer - Intern",
+        "location": "Montreal, CA",
+        "jobType": "Full-Time",
+        "descriptionHeader": "Building predictive modelling and automating / optimizing decision making",
+        "description": "As a Machine Learning engineer intern working at Watoga you will lead the architecture and development of machine learning models used to predict the properties of the subsurface from the various sources of data collected during the operation and to automate / optimize decision making in the field based on new and historical data. Your responsibilities include model architecture, benchmarking, tuning, geological data interpretation, data pipeline creation and data-driven automation.",
+        "note": "You don't need mining or drilling experience to excel in this role.",
+        "responsibilities": [
+            "Design and deploy backend/frontend systems that handle real-time field data, geological data, and sensor data",
+            "Architect, benchmark, tune, and deploy machine learning models to predict the properties of the subsurface based on historical and operational data",
+            "Build pre-processing pipelines to turn raw data into structured inputs for machine learning models",
+            "Optimize microservices and data pipelines to handle large-scale, rapidly growing datasets from operating mines",
+            "Manage core infrastructure (databases, storage, monitoring, logging) both on-premises at mine sites and in public cloud environments",
+            "Drive edge-computing strategies for low-latency analytics, machine learning, and autonomous decision-making on the mines themselves",
+            "Benchmark performance of machine learning models versus conventional methods",
+            "Collaborate with engineers and field teams to deliver end-to-end solutions from concept to field validation and hand-off", 
+            "Build hybrid optimization models and machine learning to optimize blast design and blast patterns", 
+            "Build hybrid geostatistical models to predict the properties of the subsurface from the various sources of data collected during the operation and to automate / optimize decision making in the field based on new and historical data"
+        ],
+        "competencies": [
+            "Proven success designing and scaling enterprise software in cloud-based, distributed, and microservice environments",
+            "Skilled in multiple programming languages (Python, TypeScript, Golang, Rust, C++, C, etc.) and popular machine learning libraries (e.g. pyTorch, Keras, TensorFlow, etc.) , with strong architectural principles",
+            "Experience with SQL/NoSQL databases, real-time analytics, and data pipelines handling large, streaming telemetry",
+            "Deep knowledge of cloud platforms (AWS, Azure, GCP), edge computing strategies, and event-driven architectures",
+            "Demonstrated ability to diagnose bottlenecks, optimize performance, and deliver reliable, high-traffic services in demanding or remote settings",
+            "Solid security mindset, including expertise in authentication, encryption, and compliance (e.g., SOC2, ISO 27001)",
+            "Industrial or hardware-adjacent experience (real-time data acquisition, embedded systems, rugged environments) is a plus",
+            "Experience working with large datasets and modelling complex spatial problems with machine learning is a big plus",
+            "Mathematics, Physics, or Geoscience background is a big plus"
+        ],
+        "inThisRoleYouWill": [
+            "Own a product vertical with the opportunity to build a team around yourself over time",
+            "Work directly with our internal and external customers to drive our roadmap",
+            "Get to build alongside the best engineers and mining operators in the world",
+            "Be given autonomy and virtually unlimited room to grow",
+            "Travel all over the world"
+        ],
+        "thisMightBeAGoodFitIfYou": [
+            "Have a bias to action, take pride in your work, and care more about getting to the right solution than being right",
+            "Have led critical projects or initiatives",
+            "Have extensive experience shipping modern, full-stack software",
+            "Are product-minded and user-driven",
+            "Have a strong first-principled way of thinking",
+            "Are a previous or future founder — if you leave Watoga to start a company, we'll do everything to support you, including investing in you and introducing you to Watoga's investors",
+
+            "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles"
+        ],
+        "additionalRequirements": [
+            "Must be willing to work from our headquarters in Montreal",
+            "Must be willing to work extended hours and weekends as needed"
         ],
         "salary": "$100,000–$150,000"
     },
