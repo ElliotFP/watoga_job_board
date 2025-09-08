@@ -1,30 +1,26 @@
 [
     {
-        "applicationId": "senior-backend-developer",  
-        "title": "Senior Backend Developer",
+        "applicationId": "senior-software-developer-graphics",  
+        "title": "Senior Software Developer (Graphics)",
         "location": "Montreal, CA",
         "jobType": "Full-Time",
-        "descriptionHeader": "Building data pipelines and backend services",
-        "description": "As a Senior Backend Developer at Watoga, you will design and implement data pipelines and backend services to integrate with our predictive models and optimization models.",
+        "descriptionHeader": "Building graphics, visualization and CAD tooling",
+        "description": "As a Senior Software Developer (Graphics) at Watoga, you will be responsible for developing, testing, and maintaining software applications, focusing on front-end web development and programming (React + ThreeJS). This role is primarily responsible for programming a drill-n-blast CAD & editing application using ThreeJS. ",
         "note": "You don't need mining or drilling experience to excel in this role.",
         "responsibilities": [
-            "Design data pipelines and backend services to integrate with our predictive models and optimization models",
-            "Ensure proper data collection and calibration from sensors and systems",
-            "Specify and source data pipelines and backend services (switchgear, VFDs, PLCs, sensors, cables) aligned with rig requirements",
-            "Develop wiring diagrams, harness routings, and cabinet layouts, ensuring maintainability and compliance",
-            "Coordinate with predictive models/optimization models teams to integrate data pipelines and backend services",
-            "Perform load calculations, short-circuit/arc flash analysis, and ensure systems meet relevant codes (NEC, NFPA)",
-            "Provide field support for commissioning, troubleshooting, and iterative improvements"
+            "Design graphics, visualization and CAD tooling to integrate with our drill and blast plan design application",
+            "Architect and ensure reliability of the rendering and graphics of the CAD scene",
+            "Work to make the design files exported to other CAD software",
+            "Build out integrations with other CAD software and implement systems for robust geometric representation of objects in the CAD scene"
         ],
         "competencies": [
-            "Extensive experience with data pipelines and backend services",
-            "Proficiency with CAD tools for electrical design (e.g., EPLAN, AutoCAD Electrical, SolidWorks Electrical)",
-            "Experience building backend services in Python, TypeScript, Golang, Rust, C++, C, etc.",
-            "Experience with SQL/NoSQL databases, real-time analytics, and data pipelines handling large, streaming telemetry",
-            "Experience building rigorous API services",
-            "Familiarity with relevant standards (SOC2, ISO 27001) and safe working practices",
-            "Comfortable working with cross-functional teams to integrate predictive models and optimization models",
-            "Experience diagnosing complex backend issues in demanding field environments"
+            "Extensive experience with graphics, visualization and CAD tooling",
+            "Experience in several of the following languages and frameworks: React, ThreeJS, Electron, Python, CAD, C++, Rust, Bevy, etc.",
+            "Excellent problem-solving and analytical skills",
+            "Good communication and collaboration skills",
+            "Habit of writing clean and documented code",
+            "Experience diagnosing complex graphics, visualization and CAD issues", 
+            "Experience in the mining industry is a plus"
         ],
         "inThisRoleYouWill": [
             "Own a product vertical with the opportunity to build a team around yourself over time",
@@ -36,7 +32,63 @@
         "thisMightBeAGoodFitIfYou": [
             "Have a bias to action, take pride in your work, and care more about getting to the right solution than being right",
             "Have led critical projects or initiatives",
-            "Have extensive experience shipping modern, full-stack hardware",
+            "Have extensive experience shipping modern, full-stack software",
+            "Are product-minded and user-driven",
+            "Have a strong first-principled way of thinking",
+            "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles",
+            "Are a previous or future founder — if you leave Watoga to start a company, we'll do everything to support you, including investing in you and introducing you to Watoga's investors",
+            "Can work from our Montreal headquarters"
+        ],
+        "additionalRequirements": [
+            "Must be willing to work from our headquarters in Montreal",
+            "Must be willing to work extended hours and weekends as needed"
+        ],
+        "salary": "$100,000–$150,000"
+    },
+    {
+        "applicationId": "senior-backend-developer",  
+        "title": "Senior Backend Developer",
+        "location": "Montreal, CA",
+        "jobType": "Full-Time",
+        "descriptionHeader": "Building data pipelines and backend services",
+        "description": "As a Senior Backend Developer at Watoga, you will play a key role in shaping the backbone of our systems, ensuring reliability, scalability, and performance across our platforms.",
+        "note": "You don't need mining or drilling experience to excel in this role.",
+        "responsibilities": [
+            "Architect, implement, and maintain backend services and data pipelines with a focus on scalability and fault tolerance.",
+            "Deal with and clean up operational data from sensors and mining equipment to feed into our models",
+            "Design and optimize relational database schemas, queries, and indexes using PostgreSQL.",
+            "Develop and tune geospatial queries for advanced location-based use cases.",
+            "Work with cloud-native infrastructure, primarily Google Cloud Platform (GCP).",
+            "Collaborate with frontend, DevOps, and product teams to deliver robust APIs and high-performance systems.",
+            "Build monitoring, testing, and deployment pipelines to support a rapid development cycle with IaC (Terraform).",
+            "Mentor junior developers and contribute to technical roadmap discussions."
+        ],
+        "competencies": [
+            "Considerable experience in backend software engineering, with a proven track record of building large-scale, production-grade systems.",
+            "Strong expertise with PostgreSQL (query optimization, schema design, performance tuning).",
+            "Experience with geospatial databases/queries (PostGIS or similar).",
+            "Professional experience with GCP and/or AWS services for backend and data engineering workloads.",
+            "Solid programming skills in at least one of: Python (FastAPI), C++, Rust or Node.js.",
+            "Familiarity with distributed systems, messaging queues, and stream processing.",
+            "Strong grasp of CI/CD pipelines, containerization (Docker, Kubernetes), and infrastructure-as-code.",
+            "Excellent problem-solving skills and ability to work independently as well as in cross-functional teams."
+        ],
+        "inThisRoleYouWill": [
+            "Own a product vertical with the opportunity to build a team around yourself over time",
+            "Work directly with our internal and external customers to drive our roadmap",
+            "Get to build alongside the best engineers and mining operators in the world",
+            "Be given autonomy and virtually unlimited room to grow",
+            "Travel all over the world"
+        ],
+        "thisMightBeAGoodFitIfYou": [
+            "Experience with data lake architectures and ETL/ELT workflows.",
+            "Exposure to machine learning data pipelines.",
+            "Experience working in the mining sector.",
+            "Knowledge of microservice design patterns.",
+            "Familiarity with Terraform or similar tools.",
+            "Have a bias to action, take pride in your work, and care more about getting to the right solution than being right",
+            "Have led critical projects or initiatives",
+            "Have extensive experience shipping modern, full-stack software",
             "Are product-minded and user-driven",
             "Have a strong first-principled way of thinking",
             "Are excited to work in a fast-paced environment with high stakes and quick iteration cycles",
@@ -98,12 +150,12 @@
         "salary": "$100,000–$150,000"
     },
     {
-        "applicationId": "embedded-systems-engineer",
-        "title": "Embedded Systems Engineer",
+        "applicationId": "embedded-systems-developer",
+        "title": "Embedded Systems Developer",
         "location": "Montreal, CA",
         "jobType": "Full-Time",
         "descriptionHeader": "Architecting the Sensor platform's firmware",
-        "description": "We are hiring an embedded systems engineer to develop low-level firmware for sensors, microcontrollers, and communication systems on our sensor platform. You’ll rapidly prototype, iterate, and collaborate with the rest of our team, testing in the field daily or weekly.",
+        "description": "We are hiring an embedded systems developer to develop low-level firmware for sensors, microcontrollers, and communication systems on our sensor platform. You’ll rapidly prototype, iterate, and collaborate with the rest of our team, testing in the field daily or weekly.",
         "isMiningExperienceRequired": false,
         "responsibilities": [
             "Develop and optimize firmware for embedded microcontrollers and industrial-grade equipment",
